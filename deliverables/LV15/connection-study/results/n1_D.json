@@ -1,0 +1,1331 @@
+{
+ "sized": {
+  "array": {
+   "area_mm2": 1000,
+   "rating_a": 863.3128523823477,
+   "design_a": 796.0,
+   "margin_pct": 8.45638849024468,
+   "r_ohm_km": 0.028369309726875302,
+   "c_nf_km": 323.27151029481405
+  },
+  "export": {
+   "area_mm2": 630,
+   "rating_a": 745.9083335984815,
+   "design_a": 738.8655319742808,
+   "margin_pct": 0.9531912532693143,
+   "r_ohm_km": 0.037941408626131094,
+   "c_nf_km": 144.08027797473642
+  }
+ },
+ "intact": {
+  "C1": {
+   "gen_mw": 400.0,
+   "to_grid_mw": 391.002,
+   "loss_mw": 8.998,
+   "bal_err_mw": 4.127720387714362e-11,
+   "pcc_pu": 0.9902,
+   "export_a": 606.6,
+   "array_first_a": 712.2,
+   "max_line_loading": 82.5,
+   "max_trafo_loading": 83.5,
+   "vmax": 1.0,
+   "vmin": 0.9627,
+   "exceptions": []
+  },
+  "C2": {
+   "gen_mw": 400.0,
+   "to_grid_mw": 390.037,
+   "loss_mw": 9.963,
+   "bal_err_mw": 4.1189576194256006e-09,
+   "pcc_pu": 0.9537,
+   "export_a": 706.7,
+   "array_first_a": 725.9,
+   "max_line_loading": 94.7,
+   "max_trafo_loading": 83.0,
+   "vmax": 1.0377,
+   "vmin": 0.95,
+   "exceptions": []
+  },
+  "C3": {
+   "gen_mw": 400.0,
+   "to_grid_mw": 389.653,
+   "loss_mw": 10.347,
+   "bal_err_mw": 7.355538400588557e-11,
+   "pcc_pu": 1.0246,
+   "export_a": 593.7,
+   "array_first_a": 794.1,
+   "max_line_loading": 92.0,
+   "max_trafo_loading": 95.4,
+   "vmax": 1.05,
+   "vmin": 0.9175,
+   "exceptions": []
+  },
+  "C4": {
+   "gen_mw": 40.0,
+   "to_grid_mw": 39.278,
+   "loss_mw": 0.722,
+   "bal_err_mw": 3.233735501595447e-11,
+   "pcc_pu": 1.0481,
+   "export_a": 398.1,
+   "array_first_a": 79.6,
+   "max_line_loading": 53.4,
+   "max_trafo_loading": 9.1,
+   "vmax": 1.0641,
+   "vmin": 1.0421,
+   "exceptions": []
+  }
+ },
+ "n1": {
+  "O1": {
+   "what": "one export circuit (EXP1) out",
+   "cases": {
+    "C1": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 385.191,
+     "loss_mw": 14.809,
+     "bal_err_mw": 4.787992224919435e-11,
+     "pcc_pu": 0.9751,
+     "export_a": 1135.0,
+     "array_first_a": 753.4,
+     "max_line_loading": 152.2,
+     "max_trafo_loading": 97.4,
+     "vmax": 1.0,
+     "vmin": 0.9058,
+     "exceptions": [
+      [
+       "loading",
+       "EXP2",
+       152.16
+      ]
+     ],
+     "verdict": "CURTAILED",
+     "curtailed_mw": 246.1,
+     "curtailed_summary": {
+      "gen_mw": 246.094,
+      "to_grid_mw": 240.406,
+      "loss_mw": 5.688,
+      "bal_err_mw": 2.936912935069813e-10,
+      "pcc_pu": 0.983,
+      "export_a": 745.6,
+      "array_first_a": 449.4,
+      "max_line_loading": 100.0,
+      "max_trafo_loading": 62.3,
+      "vmax": 1.0,
+      "vmin": 0.9334
+     }
+    },
+    "C2": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 385.214,
+     "loss_mw": 14.786,
+     "bal_err_mw": 6.841816002634005e-11,
+     "pcc_pu": 0.9397,
+     "export_a": 1235.6,
+     "array_first_a": 750.7,
+     "max_line_loading": 165.6,
+     "max_trafo_loading": 86.7,
+     "vmax": 1.002,
+     "vmin": 0.9117,
+     "exceptions": [
+      [
+       "voltage",
+       "PCC",
+       0.9397
+      ],
+      [
+       "loading",
+       "EXP2",
+       165.65
+      ]
+     ],
+     "verdict": "OUTSIDE LIMITS even at zero output"
+    },
+    "C3": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 380.217,
+     "loss_mw": 19.783,
+     "bal_err_mw": 1.4671677206479217e-09,
+     "pcc_pu": 1.0066,
+     "export_a": 1316.2,
+     "array_first_a": 879.8,
+     "max_line_loading": 176.5,
+     "max_trafo_loading": 120.4,
+     "vmax": 1.05,
+     "vmin": 0.8296,
+     "exceptions": [
+      [
+       "voltage",
+       "ON220",
+       0.8852
+      ],
+      [
+       "voltage",
+       "OSS220",
+       0.8783
+      ],
+      [
+       "voltage",
+       "OSS66",
+       0.8299
+      ],
+      [
+       "voltage",
+       "S1T1",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S1T2",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S1T3",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S1T4",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S1T5",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S1T6",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S1T7",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S1T8",
+       0.8296
+      ],
+      [
+       "voltage",
+       "S2T1",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S2T2",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S2T3",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S2T4",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S2T5",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S2T6",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S2T7",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S2T8",
+       0.8296
+      ],
+      [
+       "voltage",
+       "S3T1",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S3T2",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S3T3",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S3T4",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S3T5",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S3T6",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S3T7",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S3T8",
+       0.8296
+      ],
+      [
+       "voltage",
+       "S4T1",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S4T2",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S4T3",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S4T4",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S4T5",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S4T6",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S4T7",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S4T8",
+       0.8296
+      ],
+      [
+       "voltage",
+       "S5T1",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S5T2",
+       0.8298
+      ],
+      [
+       "voltage",
+       "S5T3",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S5T4",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S5T5",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S5T6",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S5T7",
+       0.8297
+      ],
+      [
+       "voltage",
+       "S5T8",
+       0.8296
+      ],
+      [
+       "loading",
+       "EXP2",
+       176.45
+      ],
+      [
+       "loading",
+       "A1_1",
+       101.91
+      ],
+      [
+       "loading",
+       "A2_1",
+       101.91
+      ],
+      [
+       "loading",
+       "A3_1",
+       101.91
+      ],
+      [
+       "loading",
+       "A4_1",
+       101.91
+      ],
+      [
+       "loading",
+       "A5_1",
+       101.91
+      ],
+      [
+       "loading",
+       "T_ON1",
+       120.42
+      ],
+      [
+       "loading",
+       "T_ON2",
+       120.42
+      ],
+      [
+       "loading",
+       "T_OSS1",
+       100.31
+      ],
+      [
+       "loading",
+       "T_OSS2",
+       100.31
+      ]
+     ],
+     "verdict": "CURTAILED",
+     "curtailed_mw": 256.2,
+     "curtailed_summary": {
+      "gen_mw": 256.25,
+      "to_grid_mw": 249.496,
+      "loss_mw": 6.754,
+      "bal_err_mw": 3.361553702063702e-09,
+      "pcc_pu": 1.0231,
+      "export_a": 743.4,
+      "array_first_a": 497.9,
+      "max_line_loading": 99.7,
+      "max_trafo_loading": 76.2,
+      "vmax": 1.05,
+      "vmin": 0.9315
+     }
+    },
+    "C4": {
+     "gen_mw": 40.0,
+     "to_grid_mw": 39.121,
+     "loss_mw": 0.879,
+     "bal_err_mw": 2.1752599721480692e-12,
+     "pcc_pu": 1.0352,
+     "export_a": 421.2,
+     "array_first_a": 81.1,
+     "max_line_loading": 56.5,
+     "max_trafo_loading": 31.5,
+     "vmax": 1.05,
+     "vmin": 0.9927,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    }
+   }
+  },
+  "O2": {
+   "what": "one OSS transformer (T_OSS1) out",
+   "cases": {
+    "C1": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 389.338,
+     "loss_mw": 10.662,
+     "bal_err_mw": 3.998579245489964e-11,
+     "pcc_pu": 0.9837,
+     "export_a": 580.8,
+     "array_first_a": 746.9,
+     "max_line_loading": 86.5,
+     "max_trafo_loading": 170.8,
+     "vmax": 1.0,
+     "vmin": 0.935,
+     "exceptions": [
+      [
+       "loading",
+       "T_OSS2",
+       170.77
+      ]
+     ],
+     "verdict": "CURTAILED",
+     "curtailed_mw": 248.4,
+     "curtailed_summary": {
+      "gen_mw": 248.438,
+      "to_grid_mw": 244.416,
+      "loss_mw": 4.022,
+      "bal_err_mw": 1.0587175580667463e-10,
+      "pcc_pu": 0.9943,
+      "export_a": 457.8,
+      "array_first_a": 437.0,
+      "max_line_loading": 61.4,
+      "max_trafo_loading": 99.9,
+      "vmax": 1.0,
+      "vmin": 0.9763
+     }
+    },
+    "C2": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 389.312,
+     "loss_mw": 10.688,
+     "bal_err_mw": 2.7672086844177102e-11,
+     "pcc_pu": 0.9488,
+     "export_a": 670.9,
+     "array_first_a": 723.6,
+     "max_line_loading": 89.9,
+     "max_trafo_loading": 165.4,
+     "vmax": 1.0412,
+     "vmin": 0.9459,
+     "exceptions": [
+      [
+       "voltage",
+       "PCC",
+       0.9488
+      ],
+      [
+       "loading",
+       "T_OSS2",
+       165.43
+      ]
+     ],
+     "verdict": "OUTSIDE LIMITS even at zero output"
+    },
+    "C3": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 381.944,
+     "loss_mw": 18.056,
+     "bal_err_mw": 4.809663778360118e-11,
+     "pcc_pu": 1.0064,
+     "export_a": 750.8,
+     "array_first_a": 1003.2,
+     "max_line_loading": 116.2,
+     "max_trafo_loading": 228.9,
+     "vmax": 1.05,
+     "vmin": 0.729,
+     "exceptions": [
+      [
+       "voltage",
+       "ON220",
+       0.8845
+      ],
+      [
+       "voltage",
+       "OSS220",
+       0.8756
+      ],
+      [
+       "voltage",
+       "OSS66",
+       0.7295
+      ],
+      [
+       "voltage",
+       "S1T1",
+       0.7293
+      ],
+      [
+       "voltage",
+       "S1T2",
+       0.7292
+      ],
+      [
+       "voltage",
+       "S1T3",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S1T4",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S1T5",
+       0.729
+      ],
+      [
+       "voltage",
+       "S1T6",
+       0.729
+      ],
+      [
+       "voltage",
+       "S1T7",
+       0.729
+      ],
+      [
+       "voltage",
+       "S1T8",
+       0.729
+      ],
+      [
+       "voltage",
+       "S2T1",
+       0.7293
+      ],
+      [
+       "voltage",
+       "S2T2",
+       0.7292
+      ],
+      [
+       "voltage",
+       "S2T3",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S2T4",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S2T5",
+       0.729
+      ],
+      [
+       "voltage",
+       "S2T6",
+       0.729
+      ],
+      [
+       "voltage",
+       "S2T7",
+       0.729
+      ],
+      [
+       "voltage",
+       "S2T8",
+       0.729
+      ],
+      [
+       "voltage",
+       "S3T1",
+       0.7293
+      ],
+      [
+       "voltage",
+       "S3T2",
+       0.7292
+      ],
+      [
+       "voltage",
+       "S3T3",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S3T4",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S3T5",
+       0.729
+      ],
+      [
+       "voltage",
+       "S3T6",
+       0.729
+      ],
+      [
+       "voltage",
+       "S3T7",
+       0.729
+      ],
+      [
+       "voltage",
+       "S3T8",
+       0.729
+      ],
+      [
+       "voltage",
+       "S4T1",
+       0.7293
+      ],
+      [
+       "voltage",
+       "S4T2",
+       0.7292
+      ],
+      [
+       "voltage",
+       "S4T3",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S4T4",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S4T5",
+       0.729
+      ],
+      [
+       "voltage",
+       "S4T6",
+       0.729
+      ],
+      [
+       "voltage",
+       "S4T7",
+       0.729
+      ],
+      [
+       "voltage",
+       "S4T8",
+       0.729
+      ],
+      [
+       "voltage",
+       "S5T1",
+       0.7293
+      ],
+      [
+       "voltage",
+       "S5T2",
+       0.7292
+      ],
+      [
+       "voltage",
+       "S5T3",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S5T4",
+       0.7291
+      ],
+      [
+       "voltage",
+       "S5T5",
+       0.729
+      ],
+      [
+       "voltage",
+       "S5T6",
+       0.729
+      ],
+      [
+       "voltage",
+       "S5T7",
+       0.729
+      ],
+      [
+       "voltage",
+       "S5T8",
+       0.729
+      ],
+      [
+       "loading",
+       "EXP1",
+       100.66
+      ],
+      [
+       "loading",
+       "EXP2",
+       100.66
+      ],
+      [
+       "loading",
+       "A1_1",
+       116.21
+      ],
+      [
+       "loading",
+       "A1_2",
+       101.7
+      ],
+      [
+       "loading",
+       "A2_1",
+       116.21
+      ],
+      [
+       "loading",
+       "A2_2",
+       101.7
+      ],
+      [
+       "loading",
+       "A3_1",
+       116.21
+      ],
+      [
+       "loading",
+       "A3_2",
+       101.7
+      ],
+      [
+       "loading",
+       "A4_1",
+       116.21
+      ],
+      [
+       "loading",
+       "A4_2",
+       101.7
+      ],
+      [
+       "loading",
+       "A5_1",
+       116.21
+      ],
+      [
+       "loading",
+       "A5_2",
+       101.7
+      ],
+      [
+       "loading",
+       "T_ON1",
+       120.99
+      ],
+      [
+       "loading",
+       "T_ON2",
+       120.99
+      ],
+      [
+       "loading",
+       "T_OSS2",
+       228.88
+      ]
+     ],
+     "verdict": "CURTAILED",
+     "curtailed_mw": 235.2,
+     "curtailed_summary": {
+      "gen_mw": 235.156,
+      "to_grid_mw": 231.487,
+      "loss_mw": 3.669,
+      "bal_err_mw": 4.5422510197568045e-10,
+      "pcc_pu": 1.0365,
+      "export_a": 377.7,
+      "array_first_a": 439.5,
+      "max_line_loading": 50.9,
+      "max_trafo_loading": 100.0,
+      "vmax": 1.05,
+      "vmin": 0.9659
+     }
+    },
+    "C4": {
+     "gen_mw": 40.0,
+     "to_grid_mw": 39.267,
+     "loss_mw": 0.733,
+     "bal_err_mw": 2.5492941091442844e-12,
+     "pcc_pu": 1.0481,
+     "export_a": 397.8,
+     "array_first_a": 79.4,
+     "max_line_loading": 53.3,
+     "max_trafo_loading": 18.2,
+     "vmax": 1.0713,
+     "vmin": 1.0421,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    }
+   }
+  },
+  "O3": {
+   "what": "one onshore transformer (T_ON1) out",
+   "cases": {
+    "C1": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 388.713,
+     "loss_mw": 11.287,
+     "bal_err_mw": 6.548539488449023e-11,
+     "pcc_pu": 0.9831,
+     "export_a": 619.9,
+     "array_first_a": 759.5,
+     "max_line_loading": 88.0,
+     "max_trafo_loading": 178.1,
+     "vmax": 1.0,
+     "vmin": 0.9039,
+     "exceptions": [
+      [
+       "loading",
+       "T_ON2",
+       178.08
+      ]
+     ],
+     "verdict": "CURTAILED",
+     "curtailed_mw": 239.8,
+     "curtailed_summary": {
+      "gen_mw": 239.844,
+      "to_grid_mw": 235.901,
+      "loss_mw": 3.943,
+      "bal_err_mw": 2.155671197101583e-10,
+      "pcc_pu": 0.9946,
+      "export_a": 467.1,
+      "array_first_a": 426.7,
+      "max_line_loading": 62.6,
+      "max_trafo_loading": 99.8,
+      "vmax": 1.0,
+      "vmin": 0.9645
+     }
+    },
+    "C2": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 388.863,
+     "loss_mw": 11.137,
+     "bal_err_mw": 3.872990816944366e-11,
+     "pcc_pu": 0.9484,
+     "export_a": 707.8,
+     "array_first_a": 732.2,
+     "max_line_loading": 94.9,
+     "max_trafo_loading": 165.8,
+     "vmax": 1.0284,
+     "vmin": 0.9484,
+     "exceptions": [
+      [
+       "voltage",
+       "PCC",
+       0.9484
+      ],
+      [
+       "loading",
+       "T_ON2",
+       165.84
+      ]
+     ],
+     "verdict": "OUTSIDE LIMITS even at zero output"
+    },
+    "C3": {
+     "gen_mw": null,
+     "to_grid_mw": null,
+     "loss_mw": null,
+     "bal_err_mw": null,
+     "pcc_pu": null,
+     "export_a": null,
+     "array_first_a": null,
+     "max_line_loading": null,
+     "max_trafo_loading": null,
+     "vmax": null,
+     "vmin": null,
+     "exceptions": [
+      [
+       "no solution",
+       "load flow did not converge",
+       null
+      ]
+     ],
+     "verdict": "CURTAILED",
+     "curtailed_mw": 216.4,
+     "curtailed_summary": {
+      "gen_mw": 216.406,
+      "to_grid_mw": 213.137,
+      "loss_mw": 3.269,
+      "bal_err_mw": 2.3729551656970216e-10,
+      "pcc_pu": 1.0379,
+      "export_a": 379.6,
+      "array_first_a": 404.7,
+      "max_line_loading": 50.9,
+      "max_trafo_loading": 99.6,
+      "vmax": 1.05,
+      "vmin": 0.9638
+     }
+    },
+    "C4": {
+     "gen_mw": 40.0,
+     "to_grid_mw": 39.273,
+     "loss_mw": 0.727,
+     "bal_err_mw": 4.815203791252998e-11,
+     "pcc_pu": 1.0481,
+     "export_a": 395.9,
+     "array_first_a": 79.8,
+     "max_line_loading": 53.1,
+     "max_trafo_loading": 17.5,
+     "vmax": 1.0579,
+     "vmin": 1.0361,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    }
+   }
+  },
+  "O4": {
+   "what": "the first section of string 1 (A1_1) out: string 1's eight turbines disconnected",
+   "cases": {
+    "C1": {
+     "gen_mw": 320.0,
+     "to_grid_mw": 314.009,
+     "loss_mw": 5.991,
+     "bal_err_mw": 5.789502210973296e-11,
+     "pcc_pu": 0.9933,
+     "export_a": 527.6,
+     "array_first_a": 704.6,
+     "max_line_loading": 81.6,
+     "max_trafo_loading": 66.2,
+     "vmax": 1.0,
+     "vmin": 0.9731,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    },
+    "C2": {
+     "gen_mw": 320.0,
+     "to_grid_mw": 313.066,
+     "loss_mw": 6.934,
+     "bal_err_mw": 1.6700951732673275e-10,
+     "pcc_pu": 0.9539,
+     "export_a": 620.3,
+     "array_first_a": 732.8,
+     "max_line_loading": 84.9,
+     "max_trafo_loading": 67.0,
+     "vmax": 1.0276,
+     "vmin": 0.95,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    },
+    "C3": {
+     "gen_mw": 320.0,
+     "to_grid_mw": 313.657,
+     "loss_mw": 6.343,
+     "bal_err_mw": 1.505886970676329e-09,
+     "pcc_pu": 1.0319,
+     "export_a": 454.4,
+     "array_first_a": 759.8,
+     "max_line_loading": 88.0,
+     "max_trafo_loading": 73.8,
+     "vmax": 1.05,
+     "vmin": 0.9579,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    },
+    "C4": {
+     "gen_mw": 32.0,
+     "to_grid_mw": 31.342,
+     "loss_mw": 0.658,
+     "bal_err_mw": 8.434364318077314e-13,
+     "pcc_pu": 1.0476,
+     "export_a": 389.6,
+     "array_first_a": 79.7,
+     "max_line_loading": 52.2,
+     "max_trafo_loading": 8.1,
+     "vmax": 1.06,
+     "vmin": 1.0401,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    }
+   }
+  },
+  "O5": {
+   "what": "one of the two 155 MVAr reactor units out",
+   "cases": {
+    "C1": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 391.95,
+     "loss_mw": 8.05,
+     "bal_err_mw": 3.853882546422938e-09,
+     "pcc_pu": 1.0077,
+     "export_a": 598.0,
+     "array_first_a": 666.2,
+     "max_line_loading": 80.2,
+     "max_trafo_loading": 78.6,
+     "vmax": 1.0536,
+     "vmin": 1.0,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    },
+    "C2": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 390.204,
+     "loss_mw": 9.796,
+     "bal_err_mw": 2.8409274932528206e-11,
+     "pcc_pu": 0.9702,
+     "export_a": 701.3,
+     "array_first_a": 687.0,
+     "max_line_loading": 94.0,
+     "max_trafo_loading": 87.7,
+     "vmax": 1.0992,
+     "vmin": 0.95,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    },
+    "C3": {
+     "gen_mw": 400.0,
+     "to_grid_mw": 391.897,
+     "loss_mw": 8.103,
+     "bal_err_mw": 8.217426739065559e-12,
+     "pcc_pu": 1.0437,
+     "export_a": 545.0,
+     "array_first_a": 729.4,
+     "max_line_loading": 84.5,
+     "max_trafo_loading": 83.1,
+     "vmax": 1.05,
+     "vmin": 0.9971,
+     "exceptions": [],
+     "verdict": "RIDES THROUGH"
+    },
+    "C4": {
+     "gen_mw": 40.0,
+     "to_grid_mw": 38.861,
+     "loss_mw": 1.139,
+     "bal_err_mw": 3.1024960378545074e-11,
+     "pcc_pu": 1.0651,
+     "export_a": 422.2,
+     "array_first_a": 78.1,
+     "max_line_loading": 56.6,
+     "max_trafo_loading": 30.5,
+     "vmax": 1.1299,
+     "vmin": 1.05,
+     "exceptions": [
+      [
+       "voltage",
+       "PCC",
+       1.0651
+      ],
+      [
+       "voltage",
+       "ON220",
+       1.1068
+      ],
+      [
+       "voltage",
+       "OSS220",
+       1.1211
+      ],
+      [
+       "voltage",
+       "OSS66",
+       1.1289
+      ],
+      [
+       "voltage",
+       "S1T1",
+       1.1293
+      ],
+      [
+       "voltage",
+       "S1T2",
+       1.1294
+      ],
+      [
+       "voltage",
+       "S1T3",
+       1.1296
+      ],
+      [
+       "voltage",
+       "S1T4",
+       1.1297
+      ],
+      [
+       "voltage",
+       "S1T5",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S1T6",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S1T7",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S1T8",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S2T1",
+       1.1293
+      ],
+      [
+       "voltage",
+       "S2T2",
+       1.1294
+      ],
+      [
+       "voltage",
+       "S2T3",
+       1.1296
+      ],
+      [
+       "voltage",
+       "S2T4",
+       1.1297
+      ],
+      [
+       "voltage",
+       "S2T5",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S2T6",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S2T7",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S2T8",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S3T1",
+       1.1293
+      ],
+      [
+       "voltage",
+       "S3T2",
+       1.1294
+      ],
+      [
+       "voltage",
+       "S3T3",
+       1.1296
+      ],
+      [
+       "voltage",
+       "S3T4",
+       1.1297
+      ],
+      [
+       "voltage",
+       "S3T5",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S3T6",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S3T7",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S3T8",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S4T1",
+       1.1293
+      ],
+      [
+       "voltage",
+       "S4T2",
+       1.1294
+      ],
+      [
+       "voltage",
+       "S4T3",
+       1.1296
+      ],
+      [
+       "voltage",
+       "S4T4",
+       1.1297
+      ],
+      [
+       "voltage",
+       "S4T5",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S4T6",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S4T7",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S4T8",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S5T1",
+       1.1293
+      ],
+      [
+       "voltage",
+       "S5T2",
+       1.1294
+      ],
+      [
+       "voltage",
+       "S5T3",
+       1.1296
+      ],
+      [
+       "voltage",
+       "S5T4",
+       1.1297
+      ],
+      [
+       "voltage",
+       "S5T5",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S5T6",
+       1.1298
+      ],
+      [
+       "voltage",
+       "S5T7",
+       1.1299
+      ],
+      [
+       "voltage",
+       "S5T8",
+       1.1299
+      ]
+     ],
+     "verdict": "VOLTAGE EXCEPTION (not curable by curtailment)"
+    }
+   }
+  }
+ },
+ "no_solution_runs": [
+  [
+   "C3",
+   "O3",
+   1.0
+  ]
+ ]
+}

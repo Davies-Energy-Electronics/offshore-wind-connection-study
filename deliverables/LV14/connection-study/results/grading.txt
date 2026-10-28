@@ -1,0 +1,32 @@
+curve {'k': 0.14, 'alpha': 0.02, 'margin_s': 0.3, 'pickup_load_factor': 1.2, 'pickup_fault_factor': 0.8, 'r1_tms_choice': 0.1} wind per string kA 0.77
+R1 {'load_a': np.float64(785.7), 'pickup_a': 950.0, 'zone_end_min_fault_a': 6910.3, 'pickup_ok_load': True, 'pickup_ok_fault': True, 'tms': 0.1, 'name': 'string feeder breaker (66 kV)'}
+R2 {'load_a': np.float64(1960.1), 'pickup_a': 2400.0, 'zone_end_min_fault_a': np.float64(4522.3), 'pickup_ok_load': True, 'pickup_ok_fault': True, 'tms': 0.1, 'name': 'OSS transformer LV incomer (66 kV)'}
+R3 {'load_a': np.float64(738.9), 'pickup_a': 900.0, 'zone_end_min_fault_a': np.float64(2037.1), 'pickup_ok_load': True, 'pickup_ok_fault': True, 'tms': 0.125, 'name': 'export circuit, onshore end (220 kV)'}
+R4 {'load_a': np.float64(326.5), 'pickup_a': 400.0, 'zone_end_min_fault_a': np.float64(1303.1), 'pickup_ok_load': True, 'pickup_ok_fault': True, 'tms': 0.225, 'name': 'onshore transformer HV (400 kV)'}
+F1 string feeder end (just beyond R1) {'R1': {'i_a': np.float64(16304.7), 't_s': np.float64(0.2393)}, 'R2': {'i_a': np.float64(6612.8), 't_s': np.float64(0.6837)}, 'R3': {'i_a': np.float64(1983.8), 't_s': np.float64(1.0983)}, 'R4': {'i_a': np.float64(1091.1), 't_s': np.float64(1.5538)}}
+F2 OSS 66 kV busbar {'R2': {'i_a': np.float64(6612.8), 't_s': np.float64(0.6837)}, 'R3': {'i_a': np.float64(1983.8), 't_s': np.float64(1.0983)}, 'R4': {'i_a': np.float64(1091.1), 't_s': np.float64(1.5538)}}
+F3 OSS 220 kV busbar {'R3': {'i_a': np.float64(3152.8), 't_s': np.float64(0.6893)}, 'R4': {'i_a': np.float64(1734.0), 't_s': np.float64(1.0581)}}
+F4 onshore 220 kV busbar {'R4': {'i_a': np.float64(2090.8), 't_s': np.float64(0.9367)}}
+{'fault': 'F1 string feeder end (just beyond R1)', 'down': 'R1', 'up': 'R2', 'margin_s': np.float64(0.4444), 'ok': True}
+{'fault': 'F1 string feeder end (just beyond R1)', 'down': 'R2', 'up': 'R3', 'margin_s': np.float64(0.4146), 'ok': True}
+{'fault': 'F1 string feeder end (just beyond R1)', 'down': 'R3', 'up': 'R4', 'margin_s': np.float64(0.4555), 'ok': True}
+{'fault': 'F2 OSS 66 kV busbar', 'down': 'R2', 'up': 'R3', 'margin_s': np.float64(0.4146), 'ok': True}
+{'fault': 'F2 OSS 66 kV busbar', 'down': 'R3', 'up': 'R4', 'margin_s': np.float64(0.4555), 'ok': True}
+{'fault': 'F3 OSS 220 kV busbar', 'down': 'R3', 'up': 'R4', 'margin_s': np.float64(0.3688), 'ok': True}
+{'cable': 'array 630 mm2 (R1 clears)', 'fault_a': np.float64(16304.7), 'allowed_s': np.float64(30.53), 'relay_s': np.float64(0.2393), 'ok': True, 'min_area_mm2_for_relay_time': np.float64(55.8)}
+{'cable': 'export 500 mm2 (R3 clears, total fault at ON220 as bound)', 'fault_a': 8757.3, 'allowed_s': 66.66, 'relay_s': np.float64(1.0983), 'ok': True, 'min_area_mm2_for_relay_time': 64.2}
+{'T_OSS2 out: R2 current at OSS66 busbar fault (A)': np.float64(9647.4), 'T_OSS2 out: R2 operating time (s)': np.float64(0.4962)}
+MIN {'fault': 'string end S1T8 (just inside R1 zone end)', 'down': 'R1', 'up': 'R2', 'down_s': np.float64(0.346), 'up_s': np.float64(1.914), 'margin_s': np.float64(1.568), 'ok': True}
+MIN {'fault': 'string end S1T8 (just inside R1 zone end)', 'down': 'R2', 'up': 'R3', 'down_s': np.float64(1.914), 'up_s': np.float64(6.186), 'margin_s': np.float64(4.272), 'ok': True}
+MIN {'fault': 'string end S1T8 (just inside R1 zone end)', 'down': 'R3', 'up': 'R4', 'down_s': np.float64(6.186), 'up_s': np.float64(4.429), 'margin_s': np.float64(-1.757), 'ok': False}
+MIN {'fault': 'OSS 66 kV busbar', 'down': 'R2', 'up': 'R3', 'down_s': np.float64(1.098), 'up_s': np.float64(2.123), 'margin_s': np.float64(1.025), 'ok': True}
+MIN {'fault': 'OSS 66 kV busbar', 'down': 'R3', 'up': 'R4', 'down_s': np.float64(2.123), 'up_s': np.float64(2.51), 'margin_s': np.float64(0.387), 'ok': True}
+MIN {'fault': 'OSS 220 kV busbar', 'down': 'R3', 'up': 'R4', 'down_s': np.float64(1.062), 'up_s': np.float64(1.513), 'margin_s': np.float64(0.451), 'ok': True}
+MIN failing 1 W3 R4 TMS 0.35
+W3 {'fault': 'string end S1T8 (just inside R1 zone end)', 'down': 'R1', 'up': 'R2', 'down_s': np.float64(0.346), 'up_s': np.float64(1.914), 'margin_s': np.float64(1.568), 'ok': True}
+W3 {'fault': 'string end S1T8 (just inside R1 zone end)', 'down': 'R2', 'up': 'R3', 'down_s': np.float64(1.914), 'up_s': np.float64(6.186), 'margin_s': np.float64(4.272), 'ok': True}
+W3 {'fault': 'string end S1T8 (just inside R1 zone end)', 'down': 'R3', 'up': 'R4', 'down_s': np.float64(6.186), 'up_s': np.float64(6.89), 'margin_s': np.float64(0.704), 'ok': True}
+W3 {'fault': 'OSS 66 kV busbar', 'down': 'R2', 'up': 'R3', 'down_s': np.float64(1.098), 'up_s': np.float64(2.123), 'margin_s': np.float64(1.025), 'ok': True}
+W3 {'fault': 'OSS 66 kV busbar', 'down': 'R3', 'up': 'R4', 'down_s': np.float64(2.123), 'up_s': np.float64(3.905), 'margin_s': np.float64(1.782), 'ok': True}
+W3 {'fault': 'OSS 220 kV busbar', 'down': 'R3', 'up': 'R4', 'down_s': np.float64(1.062), 'up_s': np.float64(2.354), 'margin_s': np.float64(1.292), 'ok': True}
+ALL PASS True

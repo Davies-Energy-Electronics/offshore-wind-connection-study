@@ -1,0 +1,424 @@
+{
+ "SOLVE": {
+  "result": "FAIL",
+  "no_solution_runs": [
+   [
+    "C3",
+    "O3",
+    1.0
+   ]
+  ],
+  "note": "A run that does not converge is counted as outside limits in the N-1 table; the criteria asked for every run to converge, so this is reported as a finding."
+ },
+ "BAL": {
+  "result": "PASS",
+  "worst_mw": 3.971861062268545e-09
+ },
+ "HAND-O1": {
+  "result": "FAIL",
+  "intact_per_circuit_a": 605.3,
+  "outage_a": 1134.7,
+  "simple_rule_diff_pct": 6.27,
+  "note": "The 5 percent rule in the criteria assumed the remaining circuit carries the intact total. It does not: half the cable charging current leaves with the circuit that is out. Refined hand value shown for information.",
+  "refined_hand_a": 1051.9,
+  "refined_diff_pct": 7.87
+ },
+ "HAND-O2": {
+  "result": "PASS",
+  "curtailed_mw": 247.7,
+  "hand_mw": 250.0,
+  "diff_pct": 0.92,
+  "note": "Hand value: the remaining 250 MVA transformer at full loading, unity power factor; array charging and losses explain the difference."
+ },
+ "FAULT-C": {
+  "result": "PASS",
+  "worst_change_pct": 0.14,
+  "rows": {
+   "PCC": {
+    "max3_revB": 15.068705858056138,
+    "max3_revC": 15.068764216658037,
+    "d_max_pct": 0.0003872834366092093,
+    "min2_revB": 6.250000000000009,
+    "min2_revC": 6.250000000000022,
+    "d_min_pct": 2.220446049250313e-13
+   },
+   "ON220": {
+    "max3_revB": 8.75733227377004,
+    "max3_revC": 8.757438380318954,
+    "d_max_pct": 0.0012116309578980022,
+    "min2_revB": 4.7383728845984745,
+    "min2_revC": 4.7383728845985,
+    "d_min_pct": 5.329070518200751e-13
+   },
+   "OSS220": {
+    "max3_revB": 7.460010656242018,
+    "max3_revC": 7.449647245130834,
+    "d_max_pct": -0.13891952154936327,
+    "min2_revB": 4.074262882661929,
+    "min2_revC": 4.068520689447804,
+    "d_min_pct": -0.14093821089850023
+   },
+   "OSS66": {
+    "max3_revB": 17.073712222155883,
+    "max3_revC": 17.063933540159706,
+    "d_max_pct": -0.05727332093302673,
+    "min2_revB": 9.044633665721474,
+    "min2_revC": 9.038210346762384,
+    "d_min_pct": -0.07101801130359187
+   },
+   "S1T8": {
+    "max3_revB": 12.71705457368018,
+    "max3_revC": 12.733301702895016,
+    "d_max_pct": 0.1277585868701303,
+    "min2_revB": 6.910275783409562,
+    "min2_revC": 6.916897588695183,
+    "d_min_pct": 0.09582548501927413
+   }
+  },
+  "note": "LV14 used LV13's cable impedances (decision recorded there). If no busbar moves by more than 2 percent, LV14's grading verdicts stand for revision C."
+ },
+ "W3": {
+  "what": "array re-sized on the revision C design current 796.0 A at soil 1.5: 1000 mm2, rating 863.3 A",
+  "cases": {
+   "C1": {
+    "gen_mw": 400.0,
+    "to_grid_mw": 391.002,
+    "loss_mw": 8.998,
+    "bal_err_mw": 4.127720387714362e-11,
+    "pcc_pu": 0.9902,
+    "export_a": 606.6,
+    "array_first_a": 712.2,
+    "max_line_loading": 82.5,
+    "max_trafo_loading": 83.5,
+    "vmax": 1.0,
+    "vmin": 0.9627,
+    "exceptions": []
+   },
+   "C2": {
+    "gen_mw": 400.0,
+    "to_grid_mw": 390.037,
+    "loss_mw": 9.963,
+    "bal_err_mw": 4.1189576194256006e-09,
+    "pcc_pu": 0.9537,
+    "export_a": 706.7,
+    "array_first_a": 725.9,
+    "max_line_loading": 94.7,
+    "max_trafo_loading": 83.0,
+    "vmax": 1.0377,
+    "vmin": 0.95,
+    "exceptions": []
+   },
+   "C3": {
+    "gen_mw": 400.0,
+    "to_grid_mw": 389.653,
+    "loss_mw": 10.347,
+    "bal_err_mw": 7.355538400588557e-11,
+    "pcc_pu": 1.0246,
+    "export_a": 593.7,
+    "array_first_a": 794.1,
+    "max_line_loading": 92.0,
+    "max_trafo_loading": 95.4,
+    "vmax": 1.05,
+    "vmin": 0.9175,
+    "exceptions": []
+   },
+   "C4": {
+    "gen_mw": 40.0,
+    "to_grid_mw": 39.278,
+    "loss_mw": 0.722,
+    "bal_err_mw": 3.233735501595447e-11,
+    "pcc_pu": 1.0481,
+    "export_a": 398.1,
+    "array_first_a": 79.6,
+    "max_line_loading": 53.4,
+    "max_trafo_loading": 9.1,
+    "vmax": 1.0641,
+    "vmin": 1.0421,
+    "exceptions": []
+   }
+  },
+  "note": "Chosen after seeing the C3 exception; informational. Shows the sizing has to be iterated: a bigger cable has more charging current."
+ },
+ "W4": {
+  "what": "onshore reactor as two 155 MVAr units, one out (half the compensation left)",
+  "cases": {
+   "C1": {
+    "gen_mw": 400.0,
+    "to_grid_mw": 391.808,
+    "loss_mw": 8.192,
+    "bal_err_mw": 3.612246501916161e-09,
+    "pcc_pu": 1.0074,
+    "export_a": 596.4,
+    "array_first_a": 666.9,
+    "max_line_loading": 84.4,
+    "max_trafo_loading": 78.6,
+    "vmax": 1.0523,
+    "vmin": 1.0,
+    "exceptions": []
+   },
+   "C2": {
+    "gen_mw": 400.0,
+    "to_grid_mw": 390.084,
+    "loss_mw": 9.916,
+    "bal_err_mw": 4.785327689660335e-11,
+    "pcc_pu": 0.97,
+    "export_a": 699.2,
+    "array_first_a": 686.4,
+    "max_line_loading": 93.7,
+    "max_trafo_loading": 87.5,
+    "vmax": 1.0979,
+    "vmin": 0.95,
+    "exceptions": []
+   },
+   "C3": {
+    "gen_mw": 400.0,
+    "to_grid_mw": 391.688,
+    "loss_mw": 8.312,
+    "bal_err_mw": 1.3038459201197838e-11,
+    "pcc_pu": 1.0434,
+    "export_a": 546.6,
+    "array_first_a": 731.3,
+    "max_line_loading": 92.5,
+    "max_trafo_loading": 83.3,
+    "vmax": 1.05,
+    "vmin": 0.9951,
+    "exceptions": []
+   },
+   "C4": {
+    "gen_mw": 40.0,
+    "to_grid_mw": 38.893,
+    "loss_mw": 1.107,
+    "bal_err_mw": 5.381628476186506e-11,
+    "pcc_pu": 1.0648,
+    "export_a": 418.7,
+    "array_first_a": 75.8,
+    "max_line_loading": 56.1,
+    "max_trafo_loading": 30.0,
+    "vmax": 1.128,
+    "vmin": 1.05,
+    "exceptions": [
+     [
+      "voltage",
+      "PCC",
+      1.0648
+     ],
+     [
+      "voltage",
+      "ON220",
+      1.1058
+     ],
+     [
+      "voltage",
+      "OSS220",
+      1.1199
+     ],
+     [
+      "voltage",
+      "OSS66",
+      1.1271
+     ],
+     [
+      "voltage",
+      "S1T1",
+      1.1275
+     ],
+     [
+      "voltage",
+      "S1T2",
+      1.1276
+     ],
+     [
+      "voltage",
+      "S1T3",
+      1.1277
+     ],
+     [
+      "voltage",
+      "S1T4",
+      1.1278
+     ],
+     [
+      "voltage",
+      "S1T5",
+      1.1279
+     ],
+     [
+      "voltage",
+      "S1T6",
+      1.128
+     ],
+     [
+      "voltage",
+      "S1T7",
+      1.128
+     ],
+     [
+      "voltage",
+      "S1T8",
+      1.128
+     ],
+     [
+      "voltage",
+      "S2T1",
+      1.1275
+     ],
+     [
+      "voltage",
+      "S2T2",
+      1.1276
+     ],
+     [
+      "voltage",
+      "S2T3",
+      1.1277
+     ],
+     [
+      "voltage",
+      "S2T4",
+      1.1278
+     ],
+     [
+      "voltage",
+      "S2T5",
+      1.1279
+     ],
+     [
+      "voltage",
+      "S2T6",
+      1.128
+     ],
+     [
+      "voltage",
+      "S2T7",
+      1.128
+     ],
+     [
+      "voltage",
+      "S2T8",
+      1.128
+     ],
+     [
+      "voltage",
+      "S3T1",
+      1.1275
+     ],
+     [
+      "voltage",
+      "S3T2",
+      1.1276
+     ],
+     [
+      "voltage",
+      "S3T3",
+      1.1277
+     ],
+     [
+      "voltage",
+      "S3T4",
+      1.1278
+     ],
+     [
+      "voltage",
+      "S3T5",
+      1.1279
+     ],
+     [
+      "voltage",
+      "S3T6",
+      1.128
+     ],
+     [
+      "voltage",
+      "S3T7",
+      1.128
+     ],
+     [
+      "voltage",
+      "S3T8",
+      1.128
+     ],
+     [
+      "voltage",
+      "S4T1",
+      1.1275
+     ],
+     [
+      "voltage",
+      "S4T2",
+      1.1276
+     ],
+     [
+      "voltage",
+      "S4T3",
+      1.1277
+     ],
+     [
+      "voltage",
+      "S4T4",
+      1.1278
+     ],
+     [
+      "voltage",
+      "S4T5",
+      1.1279
+     ],
+     [
+      "voltage",
+      "S4T6",
+      1.128
+     ],
+     [
+      "voltage",
+      "S4T7",
+      1.128
+     ],
+     [
+      "voltage",
+      "S4T8",
+      1.128
+     ],
+     [
+      "voltage",
+      "S5T1",
+      1.1275
+     ],
+     [
+      "voltage",
+      "S5T2",
+      1.1276
+     ],
+     [
+      "voltage",
+      "S5T3",
+      1.1277
+     ],
+     [
+      "voltage",
+      "S5T4",
+      1.1278
+     ],
+     [
+      "voltage",
+      "S5T5",
+      1.1279
+     ],
+     [
+      "voltage",
+      "S5T6",
+      1.128
+     ],
+     [
+      "voltage",
+      "S5T7",
+      1.128
+     ],
+     [
+      "voltage",
+      "S5T8",
+      1.128
+     ]
+    ]
+   }
+  }
+ }
+}

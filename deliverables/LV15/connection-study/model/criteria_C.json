@@ -1,0 +1,33 @@
+{
+  "revision": "C",
+  "written": "2026-10-27",
+  "note": "Written and committed BEFORE any LV15 number was run. Revision C of the LV13 base design = revision B (LV13 model, 310 MVAr reactor at the 220 kV onshore bus in every case) with the cables LV14 sized, re-sized on the conservative soil value. Do not edit after the first run without a new revision and a reason.",
+  "decisions": {
+    "D1": "Sizing margin: cables are sized on soil thermal resistivity 1.5 K m/W (the LV14 sensitivity value) instead of 1.0, until a survey replaces it. This gives 800 mm2 array and 630 mm2 export from LV14's own sensitivity table. Proposed by Claude, 27 Oct 2026, for Jack's approval.",
+    "D2": "LV13 revision C: yes. The load flow uses the sized cables' resistance at 90 C and capacitance from LV14's cable model; reactance and lengths unchanged from LV13 (A07, A11). Ratings are those at soil 1.5 K m/W.",
+    "D3": "The minimum-fault ordering check joins the grading pass rule; R4 TMS 0.35 (LV14 what-if). The 3.9 s backup time this gives at the maximum offshore 66 kV fault is reported as a finding, not accepted silently.",
+    "D4": "No datasheets or survey exist: every input stays ASSUMED and the report says so in its first paragraph."
+  },
+  "question": "Which single outages (N-1) can the 400 MW connection ride through at full output inside limits, and for each that cannot, what is the largest output that stays inside limits?",
+  "limits": {
+    "voltage_pu": {"pcc_400kv": [0.95, 1.05], "internal_220kv_and_66kv": [0.90, 1.10]},
+    "loading_percent": {"cables": 100.0, "transformers": 100.0},
+    "basis": "Same as LV13 revision A. Author's design criteria, NOT SOURCED to a standard or the Grid Code; the SQSS and Grid Code were not read."
+  },
+  "intact_rule": "Cases C1 to C4 (LV13 criteria.json) converge and are inside limits on revision C. An exception is reported with its computed cause; the PCC overvoltage of C4 found in LV13 and LV14 is expected and is reported, not fixed.",
+  "outages": [
+    {"id": "O1", "what": "one export circuit (EXP1) out"},
+    {"id": "O2", "what": "one OSS transformer (T_OSS1) out"},
+    {"id": "O3", "what": "one onshore transformer (T_ON1) out"},
+    {"id": "O4", "what": "the first section of string 1 (A1_1) out: string 1's eight turbines disconnected"},
+    {"id": "O5", "what": "the onshore reactor out"}
+  ],
+  "n1_rule": "For each outage and each case C1 to C4: run at the case's output. If inside limits, RIDES THROUGH. If not, find by bisection (1 MW) the largest total output, all in-service turbines scaled equally at the case's power factor, that is inside limits: that is the CURTAILED output. Voltage-only exceptions at C4 (light load) are reported as voltage exceptions, since curtailing cannot cure an overvoltage from cable charging. Remedies appear only as labelled what-ifs.",
+  "checks": [
+    {"id": "SOLVE", "what": "every run converges"},
+    {"id": "BAL", "what": "generation minus power into the grid equals total branch loss", "tolerance_mw": 1e-6},
+    {"id": "HAND-O1", "what": "with one export circuit out at C1, the remaining circuit current is close to the intact two-circuit total (within 5 percent), by hand from the intact flow", "tolerance_percent": 5},
+    {"id": "HAND-O2", "what": "the curtailed output with one 250 MVA OSS transformer out is within 5 percent of 250 MVA times the case power factor minus the array losses, by hand", "tolerance_percent": 5},
+    {"id": "FAULT-C", "what": "maximum fault levels on revision C cables against LV14 (revision B): the change is reported, and LV14's grading verdicts are re-checked if any busbar changes by more than 2 percent"}
+  ]
+}

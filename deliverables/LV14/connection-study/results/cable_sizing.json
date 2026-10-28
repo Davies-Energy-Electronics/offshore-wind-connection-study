@@ -1,0 +1,420 @@
+{
+ "inputs": {
+  "array": {
+   "un_kv": 66.0,
+   "t_ins_mm": 10.0,
+   "area_mm2": 0.0,
+   "f_hz": 50.0,
+   "rho20": 1.7241e-08,
+   "alpha20": 0.00393,
+   "fill": 0.92,
+   "ks": 1.0,
+   "kp": 0.8,
+   "theta_max": 90.0,
+   "theta_amb": 15.0,
+   "rho_ins": 3.5,
+   "eps_r": 2.5,
+   "tan_d": 0.001,
+   "t_cov_mm": 16.0,
+   "rho_cov": 6.0,
+   "rho_soil": 1.0,
+   "depth_m": 1.0,
+   "lam": 0.1
+  },
+  "export": {
+   "un_kv": 220.0,
+   "t_ins_mm": 24.0,
+   "area_mm2": 0.0,
+   "f_hz": 50.0,
+   "rho20": 1.7241e-08,
+   "alpha20": 0.00393,
+   "fill": 0.92,
+   "ks": 1.0,
+   "kp": 0.8,
+   "theta_max": 90.0,
+   "theta_amb": 15.0,
+   "rho_ins": 3.5,
+   "eps_r": 2.5,
+   "tan_d": 0.001,
+   "t_cov_mm": 16.0,
+   "rho_cov": 6.0,
+   "rho_soil": 1.0,
+   "depth_m": 1.0,
+   "lam": 0.1
+  }
+ },
+ "array": {
+  "design_a": 785.7,
+  "chosen_mm2": 630,
+  "rating_a": 814.0,
+  "margin_pct": 3.6,
+  "parts": {
+   "dc_mm": 29.527822421204874,
+   "d_ext_mm": 138.7176256357221,
+   "T1": 0.28810318540165114,
+   "T3": 0.25043418309272963,
+   "T4": 0.5348249721325111,
+   "c_nf_per_km": 268.911096178064,
+   "Wd": 0.12266628483700305,
+   "R_uohm_m": 39.150215494148824,
+   "Rdc_uohm_m": 34.89523666666667,
+   "ys": 0.06408127111908989,
+   "yp": 0.05785453542457769,
+   "R_ohm_km": 0.03915021549414883
+  },
+  "table": [
+   {
+    "area": 95,
+    "rating_a": 294.5,
+    "pct_of_design": 266.8,
+    "R_ohm_km_90C": 0.2319,
+    "c_nf_km": 137.8,
+    "d_ext_mm": 99.8,
+    "ys": 0.0015,
+    "yp": 0.0006
+   },
+   {
+    "area": 120,
+    "rating_a": 335.3,
+    "pct_of_design": 234.3,
+    "R_ohm_km_90C": 0.1838,
+    "c_nf_km": 148.5,
+    "d_ext_mm": 102.9,
+    "ys": 0.0024,
+    "yp": 0.0011
+   },
+   {
+    "area": 150,
+    "rating_a": 379.6,
+    "pct_of_design": 207.0,
+    "R_ohm_km_90C": 0.1474,
+    "c_nf_km": 159.8,
+    "d_ext_mm": 106.1,
+    "ys": 0.0038,
+    "yp": 0.0019
+   },
+   {
+    "area": 185,
+    "rating_a": 426.4,
+    "pct_of_design": 184.2,
+    "R_ohm_km_90C": 0.1199,
+    "c_nf_km": 171.5,
+    "d_ext_mm": 109.6,
+    "ys": 0.0058,
+    "yp": 0.0032
+   },
+   {
+    "area": 240,
+    "rating_a": 492.4,
+    "pct_of_design": 159.6,
+    "R_ohm_km_90C": 0.0931,
+    "c_nf_km": 187.8,
+    "d_ext_mm": 114.4,
+    "ys": 0.0097,
+    "yp": 0.0062
+   },
+   {
+    "area": 300,
+    "rating_a": 556.3,
+    "pct_of_design": 141.2,
+    "R_ohm_km_90C": 0.0752,
+    "c_nf_km": 203.4,
+    "d_ext_mm": 119.0,
+    "ys": 0.0151,
+    "yp": 0.0106
+   },
+   {
+    "area": 400,
+    "rating_a": 648.7,
+    "pct_of_design": 121.1,
+    "R_ohm_km_90C": 0.0576,
+    "c_nf_km": 226.1,
+    "d_ext_mm": 125.8,
+    "ys": 0.0266,
+    "yp": 0.0211
+   },
+   {
+    "area": 500,
+    "rating_a": 727.4,
+    "pct_of_design": 108.0,
+    "R_ohm_km_90C": 0.0473,
+    "c_nf_km": 246.0,
+    "d_ext_mm": 131.8,
+    "ys": 0.0411,
+    "yp": 0.0351
+   },
+   {
+    "area": 630,
+    "rating_a": 814.0,
+    "pct_of_design": 96.5,
+    "R_ohm_km_90C": 0.0392,
+    "c_nf_km": 268.9,
+    "d_ext_mm": 138.7,
+    "ys": 0.0641,
+    "yp": 0.0579
+   },
+   {
+    "area": 800,
+    "rating_a": 906.2,
+    "pct_of_design": 86.7,
+    "R_ohm_km_90C": 0.0328,
+    "c_nf_km": 295.5,
+    "d_ext_mm": 146.8,
+    "ys": 0.1002,
+    "yp": 0.0936
+   },
+   {
+    "area": 1000,
+    "rating_a": 992.3,
+    "pct_of_design": 79.2,
+    "R_ohm_km_90C": 0.0284,
+    "c_nf_km": 323.3,
+    "d_ext_mm": 155.3,
+    "ys": 0.1498,
+    "yp": 0.1407
+   },
+   {
+    "area": 1200,
+    "rating_a": 1061.7,
+    "pct_of_design": 74.0,
+    "R_ohm_km_90C": 0.0255,
+    "c_nf_km": 348.3,
+    "d_ext_mm": 162.9,
+    "ys": 0.2049,
+    "yp": 0.1896
+   },
+   {
+    "area": 1400,
+    "rating_a": 1120.0,
+    "pct_of_design": 70.1,
+    "R_ohm_km_90C": 0.0236,
+    "c_nf_km": 371.3,
+    "d_ext_mm": 169.9,
+    "ys": 0.2633,
+    "yp": 0.2376
+   },
+   {
+    "area": 1600,
+    "rating_a": 1170.9,
+    "pct_of_design": 67.1,
+    "R_ohm_km_90C": 0.0221,
+    "c_nf_km": 392.7,
+    "d_ext_mm": 176.5,
+    "ys": 0.3231,
+    "yp": 0.2833
+   },
+   {
+    "area": 2000,
+    "rating_a": 1259.3,
+    "pct_of_design": 62.4,
+    "R_ohm_km_90C": 0.0199,
+    "c_nf_km": 431.7,
+    "d_ext_mm": 188.5,
+    "ys": 0.4407,
+    "yp": 0.3652
+   }
+  ],
+  "sensitivity_rating_at_chosen": {
+   "soil 0.7": 901.4,
+   "soil 1.5": 711.7,
+   "soil 2.0": 640.1,
+   "ambient 20": 786.3,
+   "lam 0": 849.5,
+   "lam 0.3": 754.6,
+   "depth 2 m": 766.7
+  },
+  "sensitivity_smallest_size": {
+   "soil 1.5": 800,
+   "soil 2.0": 1200,
+   "lam 0.3": 800
+  }
+ },
+ "export": {
+  "design_a": 738.9,
+  "chosen_mm2": 500,
+  "rating_a": 759.6,
+  "margin_pct": 2.8,
+  "parts": {
+   "dc_mm": 26.30547497086915,
+   "d_ext_mm": 192.10604692425775,
+   "T1": 0.5784369280870632,
+   "T3": 0.1739988392001924,
+   "T4": 0.4828263654966966,
+   "c_nf_per_km": 133.93706320750152,
+   "Wd": 0.6788514526899403,
+   "R_uohm_m": 46.366881656854076,
+   "Rdc_uohm_m": 43.967998200000004,
+   "ys": 0.04114428941606416,
+   "yp": 0.013415471206698967,
+   "R_ohm_km": 0.04636688165685408
+  },
+  "table": [
+   {
+    "area": 95,
+    "rating_a": 310.3,
+    "pct_of_design": 238.1,
+    "R_ohm_km_90C": 0.2318,
+    "c_nf_km": 84.5,
+    "d_ext_mm": 160.1,
+    "ys": 0.0015,
+    "yp": 0.0002
+   },
+   {
+    "area": 120,
+    "rating_a": 352.6,
+    "pct_of_design": 209.5,
+    "R_ohm_km_90C": 0.1837,
+    "c_nf_km": 89.6,
+    "d_ext_mm": 163.2,
+    "ys": 0.0024,
+    "yp": 0.0003
+   },
+   {
+    "area": 150,
+    "rating_a": 398.4,
+    "pct_of_design": 185.5,
+    "R_ohm_km_90C": 0.1472,
+    "c_nf_km": 94.9,
+    "d_ext_mm": 166.5,
+    "ys": 0.0038,
+    "yp": 0.0006
+   },
+   {
+    "area": 185,
+    "rating_a": 446.7,
+    "pct_of_design": 165.4,
+    "R_ohm_km_90C": 0.1196,
+    "c_nf_km": 100.3,
+    "d_ext_mm": 169.9,
+    "ys": 0.0058,
+    "yp": 0.001
+   },
+   {
+    "area": 240,
+    "rating_a": 514.8,
+    "pct_of_design": 143.5,
+    "R_ohm_km_90C": 0.0927,
+    "c_nf_km": 107.8,
+    "d_ext_mm": 174.7,
+    "ys": 0.0097,
+    "yp": 0.002
+   },
+   {
+    "area": 300,
+    "rating_a": 580.8,
+    "pct_of_design": 127.2,
+    "R_ohm_km_90C": 0.0747,
+    "c_nf_km": 114.9,
+    "d_ext_mm": 179.3,
+    "ys": 0.0151,
+    "yp": 0.0037
+   },
+   {
+    "area": 400,
+    "rating_a": 676.8,
+    "pct_of_design": 109.2,
+    "R_ohm_km_90C": 0.0568,
+    "c_nf_km": 125.1,
+    "d_ext_mm": 186.1,
+    "ys": 0.0266,
+    "yp": 0.0077
+   },
+   {
+    "area": 500,
+    "rating_a": 759.6,
+    "pct_of_design": 97.3,
+    "R_ohm_km_90C": 0.0464,
+    "c_nf_km": 133.9,
+    "d_ext_mm": 192.1,
+    "ys": 0.0411,
+    "yp": 0.0134
+   },
+   {
+    "area": 630,
+    "rating_a": 852.0,
+    "pct_of_design": 86.7,
+    "R_ohm_km_90C": 0.0379,
+    "c_nf_km": 144.1,
+    "d_ext_mm": 199.0,
+    "ys": 0.0641,
+    "yp": 0.0232
+   },
+   {
+    "area": 800,
+    "rating_a": 952.5,
+    "pct_of_design": 77.6,
+    "R_ohm_km_90C": 0.0313,
+    "c_nf_km": 155.7,
+    "d_ext_mm": 207.1,
+    "ys": 0.1002,
+    "yp": 0.0394
+   },
+   {
+    "area": 1000,
+    "rating_a": 1048.5,
+    "pct_of_design": 70.5,
+    "R_ohm_km_90C": 0.0266,
+    "c_nf_km": 167.8,
+    "d_ext_mm": 215.6,
+    "ys": 0.1498,
+    "yp": 0.062
+   },
+   {
+    "area": 1200,
+    "rating_a": 1126.8,
+    "pct_of_design": 65.6,
+    "R_ohm_km_90C": 0.0237,
+    "c_nf_km": 178.7,
+    "d_ext_mm": 223.2,
+    "ys": 0.2049,
+    "yp": 0.0866
+   },
+   {
+    "area": 1400,
+    "rating_a": 1192.6,
+    "pct_of_design": 62.0,
+    "R_ohm_km_90C": 0.0216,
+    "c_nf_km": 188.6,
+    "d_ext_mm": 230.3,
+    "ys": 0.2633,
+    "yp": 0.1118
+   },
+   {
+    "area": 1600,
+    "rating_a": 1249.6,
+    "pct_of_design": 59.1,
+    "R_ohm_km_90C": 0.0201,
+    "c_nf_km": 197.8,
+    "d_ext_mm": 236.8,
+    "ys": 0.3231,
+    "yp": 0.1367
+   },
+   {
+    "area": 2000,
+    "rating_a": 1347.0,
+    "pct_of_design": 54.9,
+    "R_ohm_km_90C": 0.0179,
+    "c_nf_km": 214.5,
+    "d_ext_mm": 248.8,
+    "ys": 0.4407,
+    "yp": 0.1833
+   }
+  ],
+  "sensitivity_rating_at_chosen": {
+   "soil 0.7": 837.5,
+   "soil 1.5": 666.5,
+   "soil 2.0": 600.2,
+   "ambient 20": 733.3,
+   "lam 0": 788.4,
+   "lam 0.3": 710.3,
+   "depth 2 m": 712.6
+  },
+  "sensitivity_smallest_size": {
+   "soil 1.5": 630,
+   "soil 2.0": 800,
+   "lam 0.3": 630
+  },
+  "n1_informational_a": 1477.7,
+  "n1_smallest_mm2": null
+ }
+}

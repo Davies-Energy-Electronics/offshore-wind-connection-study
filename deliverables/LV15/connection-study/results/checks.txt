@@ -1,0 +1,24 @@
+SOLVE FAIL {'no_solution_runs': [['C3', 'O3', 1.0]]}
+    A run that does not converge is counted as outside limits in the N-1 table; the criteria asked for every run to converge, so this is reported as a finding.
+BAL PASS {'worst_mw': 3.971861062268545e-09}
+HAND-O1 FAIL {'intact_per_circuit_a': 605.3, 'outage_a': 1134.7, 'simple_rule_diff_pct': 6.27, 'refined_hand_a': 1051.9, 'refined_diff_pct': 7.87}
+    The 5 percent rule in the criteria assumed the remaining circuit carries the intact total. It does not: half the cable charging current leaves with the circuit that is out. Refined hand value shown for information.
+HAND-O2 PASS {'curtailed_mw': 247.7, 'hand_mw': 250.0, 'diff_pct': 0.92}
+    Hand value: the remaining 250 MVA transformer at full loading, unity power factor; array charging and losses explain the difference.
+FAULT-C PASS {'worst_change_pct': 0.14}
+    LV14 used LV13's cable impedances (decision recorded there). If no busbar moves by more than 2 percent, LV14's grading verdicts stand for revision C.
+   PCC     max 15.069 -> 15.069 kA (+0.00 %), min 2ph 6.250 -> 6.250 kA (+0.00 %)
+   ON220   max 8.757 -> 8.757 kA (+0.00 %), min 2ph 4.738 -> 4.738 kA (+0.00 %)
+   OSS220  max 7.460 -> 7.450 kA (-0.14 %), min 2ph 4.074 -> 4.069 kA (-0.14 %)
+   OSS66   max 17.074 -> 17.064 kA (-0.06 %), min 2ph 9.045 -> 9.038 kA (-0.07 %)
+   S1T8    max 12.717 -> 12.733 kA (+0.13 %), min 2ph 6.910 -> 6.917 kA (+0.10 %)
+W3 array re-sized on the revision C design current 796.0 A at soil 1.5: 1000 mm2, rating 863.3 A
+    C1 exceptions [] | max line % 82.5 | vmax 1.0 | PCC 0.9902
+    C2 exceptions [] | max line % 94.7 | vmax 1.0377 | PCC 0.9537
+    C3 exceptions [] | max line % 92.0 | vmax 1.05 | PCC 1.0246
+    C4 exceptions [] | max line % 53.4 | vmax 1.0641 | PCC 1.0481
+W4 onshore reactor as two 155 MVAr units, one out (half the compensation left)
+    C1 exceptions [] | max line % 84.4 | vmax 1.0523 | PCC 1.0074
+    C2 exceptions [] | max line % 93.7 | vmax 1.0979 | PCC 0.97
+    C3 exceptions [] | max line % 92.5 | vmax 1.05 | PCC 1.0434
+    C4 exceptions [('voltage', 'PCC', 1.0648), ('voltage', 'ON220', 1.1058), ('voltage', 'OSS220', 1.1199), ('voltage', 'OSS66', 1.1271)] | max line % 56.1 | vmax 1.128 | PCC 1.0648

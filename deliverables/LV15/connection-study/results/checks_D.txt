@@ -1,0 +1,10 @@
+SOLVE FAIL {'no_solution_runs': [['C3', 'O3', 1.0]]}
+BAL PASS {'worst_mw': 4.1189576194256006e-09}
+HAND-O2 PASS {'curtailed_mw': 248.4, 'hand_mw': 250.0, 'diff_pct': 0.64}
+FAULT-D PASS {'worst_change_pct': 0.266}
+R1 PASS {'pickup_a': 960.0, 'max_load_a': 794.1, 'min_pickup_a': 952.9, 'zone_end_min_fault_a': 6925.4, 'max_pickup_a': 5540.3, 't_r1_s': 0.2402, 't_r2_s': 0.6837, 'margin_s': 0.4435, 'currents_source': 'LV14 results/grading.txt, F1'}
+   PCC     max 15.069 -> 15.069 kA (+0.00 %), min 2ph 6.250 -> 6.250 kA (-0.00 %)
+   ON220   max 8.757 -> 8.757 kA (+0.00 %), min 2ph 4.738 -> 4.738 kA (-0.00 %)
+   OSS220  max 7.460 -> 7.450 kA (-0.14 %), min 2ph 4.074 -> 4.069 kA (-0.14 %)
+   OSS66   max 17.074 -> 17.064 kA (-0.06 %), min 2ph 9.045 -> 9.038 kA (-0.07 %)
+   S1T8    max 12.717 -> 12.751 kA (+0.27 %), min 2ph 6.910 -> 6.925 kA (+0.22 %)

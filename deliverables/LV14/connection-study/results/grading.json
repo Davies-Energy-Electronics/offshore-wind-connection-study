@@ -1,0 +1,292 @@
+{
+ "curve": {
+  "k": 0.14,
+  "alpha": 0.02,
+  "margin_s": 0.3,
+  "pickup_load_factor": 1.2,
+  "pickup_fault_factor": 0.8,
+  "r1_tms_choice": 0.1
+ },
+ "wind_per_string_ka": 0.769800358919501,
+ "relays": {
+  "R1": {
+   "load_a": 785.7,
+   "pickup_a": 950.0,
+   "zone_end_min_fault_a": 6910.3,
+   "pickup_ok_load": true,
+   "pickup_ok_fault": true,
+   "tms": 0.1,
+   "name": "string feeder breaker (66 kV)"
+  },
+  "R2": {
+   "load_a": 1960.1,
+   "pickup_a": 2400.0,
+   "zone_end_min_fault_a": 4522.3,
+   "pickup_ok_load": true,
+   "pickup_ok_fault": true,
+   "tms": 0.1,
+   "name": "OSS transformer LV incomer (66 kV)"
+  },
+  "R3": {
+   "load_a": 738.9,
+   "pickup_a": 900.0,
+   "zone_end_min_fault_a": 2037.1,
+   "pickup_ok_load": true,
+   "pickup_ok_fault": true,
+   "tms": 0.125,
+   "name": "export circuit, onshore end (220 kV)"
+  },
+  "R4": {
+   "load_a": 326.5,
+   "pickup_a": 400.0,
+   "zone_end_min_fault_a": 1303.1,
+   "pickup_ok_load": true,
+   "pickup_ok_fault": true,
+   "tms": 0.225,
+   "name": "onshore transformer HV (400 kV)"
+  }
+ },
+ "matrix": {
+  "F1 string feeder end (just beyond R1)": {
+   "R1": {
+    "i_a": 16304.7,
+    "t_s": 0.2393
+   },
+   "R2": {
+    "i_a": 6612.8,
+    "t_s": 0.6837
+   },
+   "R3": {
+    "i_a": 1983.8,
+    "t_s": 1.0983
+   },
+   "R4": {
+    "i_a": 1091.1,
+    "t_s": 1.5538
+   }
+  },
+  "F2 OSS 66 kV busbar": {
+   "R2": {
+    "i_a": 6612.8,
+    "t_s": 0.6837
+   },
+   "R3": {
+    "i_a": 1983.8,
+    "t_s": 1.0983
+   },
+   "R4": {
+    "i_a": 1091.1,
+    "t_s": 1.5538
+   }
+  },
+  "F3 OSS 220 kV busbar": {
+   "R3": {
+    "i_a": 3152.8,
+    "t_s": 0.6893
+   },
+   "R4": {
+    "i_a": 1734.0,
+    "t_s": 1.0581
+   }
+  },
+  "F4 onshore 220 kV busbar": {
+   "R4": {
+    "i_a": 2090.8,
+    "t_s": 0.9367
+   }
+  }
+ },
+ "margins": [
+  {
+   "fault": "F1 string feeder end (just beyond R1)",
+   "down": "R1",
+   "up": "R2",
+   "margin_s": 0.4444,
+   "ok": true
+  },
+  {
+   "fault": "F1 string feeder end (just beyond R1)",
+   "down": "R2",
+   "up": "R3",
+   "margin_s": 0.4146,
+   "ok": true
+  },
+  {
+   "fault": "F1 string feeder end (just beyond R1)",
+   "down": "R3",
+   "up": "R4",
+   "margin_s": 0.4555,
+   "ok": true
+  },
+  {
+   "fault": "F2 OSS 66 kV busbar",
+   "down": "R2",
+   "up": "R3",
+   "margin_s": 0.4146,
+   "ok": true
+  },
+  {
+   "fault": "F2 OSS 66 kV busbar",
+   "down": "R3",
+   "up": "R4",
+   "margin_s": 0.4555,
+   "ok": true
+  },
+  {
+   "fault": "F3 OSS 220 kV busbar",
+   "down": "R3",
+   "up": "R4",
+   "margin_s": 0.3688,
+   "ok": true
+  }
+ ],
+ "withstand": [
+  {
+   "cable": "array 630 mm2 (R1 clears)",
+   "fault_a": 16304.7,
+   "allowed_s": 30.53,
+   "relay_s": 0.2393,
+   "ok": true,
+   "min_area_mm2_for_relay_time": 55.8
+  },
+  {
+   "cable": "export 500 mm2 (R3 clears, total fault at ON220 as bound)",
+   "fault_a": 8757.3,
+   "allowed_s": 66.66,
+   "relay_s": 1.0983,
+   "ok": true,
+   "min_area_mm2_for_relay_time": 64.2
+  }
+ ],
+ "informational": {
+  "T_OSS2 out: R2 current at OSS66 busbar fault (A)": 9647.4,
+  "T_OSS2 out: R2 operating time (s)": 0.4962
+ },
+ "min_fault_check": {
+  "rows": [
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R1",
+    "up": "R2",
+    "down_s": 0.346,
+    "up_s": 1.914,
+    "margin_s": 1.568,
+    "ok": true
+   },
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R2",
+    "up": "R3",
+    "down_s": 1.914,
+    "up_s": 6.186,
+    "margin_s": 4.272,
+    "ok": true
+   },
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 6.186,
+    "up_s": 4.429,
+    "margin_s": -1.757,
+    "ok": false
+   },
+   {
+    "fault": "OSS 66 kV busbar",
+    "down": "R2",
+    "up": "R3",
+    "down_s": 1.098,
+    "up_s": 2.123,
+    "margin_s": 1.025,
+    "ok": true
+   },
+   {
+    "fault": "OSS 66 kV busbar",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 2.123,
+    "up_s": 2.51,
+    "margin_s": 0.387,
+    "ok": true
+   },
+   {
+    "fault": "OSS 220 kV busbar",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 1.062,
+    "up_s": 1.513,
+    "margin_s": 0.451,
+    "ok": true
+   }
+  ],
+  "failing": [
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 6.186,
+    "up_s": 4.429,
+    "margin_s": -1.757,
+    "ok": false
+   }
+  ],
+  "w3_r4_tms_that_clears_min_fault": 0.35,
+  "w3_rows": [
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R1",
+    "up": "R2",
+    "down_s": 0.346,
+    "up_s": 1.914,
+    "margin_s": 1.568,
+    "ok": true
+   },
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R2",
+    "up": "R3",
+    "down_s": 1.914,
+    "up_s": 6.186,
+    "margin_s": 4.272,
+    "ok": true
+   },
+   {
+    "fault": "string end S1T8 (just inside R1 zone end)",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 6.186,
+    "up_s": 6.89,
+    "margin_s": 0.704,
+    "ok": true
+   },
+   {
+    "fault": "OSS 66 kV busbar",
+    "down": "R2",
+    "up": "R3",
+    "down_s": 1.098,
+    "up_s": 2.123,
+    "margin_s": 1.025,
+    "ok": true
+   },
+   {
+    "fault": "OSS 66 kV busbar",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 2.123,
+    "up_s": 3.905,
+    "margin_s": 1.782,
+    "ok": true
+   },
+   {
+    "fault": "OSS 220 kV busbar",
+    "down": "R3",
+    "up": "R4",
+    "down_s": 1.062,
+    "up_s": 2.354,
+    "margin_s": 1.292,
+    "ok": true
+   }
+  ]
+ },
+ "all_pass": true
+}

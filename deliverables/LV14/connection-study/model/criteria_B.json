@@ -1,0 +1,34 @@
+{
+ "revision": "B",
+ "written": "2026-10-22",
+ "note": "Written and committed BEFORE any LV14 number was run. Revision B of the LV13 base design adds a 310 MVAr onshore 220 kV shunt reactor in service in all four cases (Jack's decision 7, 21 Oct 2026, on the recommendation, because all four LV13 revision A cases fail without it). Nothing else in LV13 is changed. LV13 revision A stays as it was.",
+ "question": "Which cable sizes carry the load with a stated margin, what are the fault levels at each busbar, and can overcurrent relays be graded so each trips the nearest fault first?",
+ "base_design": "LV13 model with reactor_mvar = 310 at ON220 in all of C1 to C4. Design currents are the largest branch currents over C1 to C4 of that model.",
+ "cable_sizing": {
+  "rule": "Smallest conductor area in the stated series whose computed continuous rating is at least the design current, AND whose adiabatic withstand covers the maximum three-phase fault current at the cable's sending end for the clearing time the grading study gives it (checked after grading).",
+  "design_current_margin": "rating >= 1.00 x design current (no extra margin). Reported as a percentage.",
+  "series_mm2": [95, 120, 150, 185, 240, 300, 400, 500, 630, 800, 1000, 1200, 1400, 1600, 2000],
+  "series_basis": "Preferred conductor areas from general knowledge of IEC 60228. IEC 60228 NOT read: NOT SOURCED.",
+  "method": "One-dimensional thermal circuit (conductor loss through insulation, bedding and sheath, then the soil, with Kennelly buried-cylinder soil resistance), the form used by IEC 60287. IEC 60287 NOT read: formulae written from general knowledge and NOT SOURCED to the standard text. Result is a design estimate, not a certified rating.",
+  "limits": "Intact network only. N-1 (one export circuit out) is LV15 and is reported only as an informational row."
+ },
+ "fault_levels": {
+  "method": "Initial symmetrical short-circuit current by the IEC 60909 voltage-source method as implemented in pandapower 3.5.6 (code read), checked against an independent impedance-matrix calculation. IEC 60909 NOT read.",
+  "buses": ["PCC", "ON220", "OSS220", "OSS66", "S1T8"],
+  "maximum_case": "three-phase, c_max, grid short-circuit power 10000 MVA (LV13 A15), all transformers and circuits in service, wind farm contributing as current sources",
+  "minimum_case": "two-phase, c_min, grid short-circuit power 5000 MVA (the LV13 low sensitivity value), wind farm not contributing",
+  "wind_contribution": "ASSUMED k = 1.1 times rated current per turbine (current-limited converter). NOT SOURCED.",
+  "single_phase_earth": "NOT DONE. Needs zero-sequence and earthing data that nobody has assumed. Listed as a gap.",
+  "check_tolerance_percent": 0.1
+ },
+ "grading": {
+  "chain": "string feeder breaker at OSS66, OSS transformer 66 kV incomer, export circuit relay at ON220, onshore transformer 400 kV relay",
+  "curve": "IEC standard inverse, t = TMS x 0.14 / ((I/Is)^0.02 - 1). Constants from vendor documentation seen in a search result, not from IEC 60255-151 itself. NOT VERIFIED against the standard.",
+  "pickup_rule": "Is >= 1.2 x maximum load current through the relay AND Is <= 0.8 x minimum fault current at the end of its own zone (two-phase, minimum case).",
+  "margin_rule": "Between each relay and the next upstream relay, the upstream operating time is at least 0.30 s longer than the downstream one at the maximum fault current at the downstream relay's busbar. The 0.30 s is an assumed grading margin, NOT SOURCED.",
+  "tms_steps": "0.025 to 1.000 in steps of 0.025; smallest value that meets the margin rule is chosen",
+  "cable_withstand": "Operating time at maximum fault current at each cable's sending end must be no longer than the adiabatic withstand time (K S / I)^2 with K = 143 A sqrt(s) / mm2 for copper XLPE (value from general knowledge, NOT SOURCED).",
+  "pass_rule": "All margin, pickup and withstand rules met, otherwise the failing rule is reported as an exception with its numbers."
+ },
+ "checks": ["CAB-HAND: rating re-computed by hand formula in the report to 0.5 percent", "FLT-X: pandapower vs independent impedance calculation within 0.1 percent for grid-only fault current", "GRD-X: grading margins recomputed by an independent script"]
+}

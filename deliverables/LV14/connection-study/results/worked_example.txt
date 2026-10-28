@@ -1,0 +1,11 @@
+WORKED EXAMPLE: 220 kV export cable, 500 mm2 copper, three-core XLPE, buried 1.0 m. All inputs ASSUMED; IEC 60287 NOT read.
+1 Temperature rise available: 90.0 - 15.0 = 75.0 K
+2 Conductor diameter from area: sqrt(4 x 500 / (pi x 0.92)) = 26.31 mm
+3 AC resistance at 90 C: Rdc20 = 1.7241e-8 / 500e-6 = 34.48 uohm/m; x(1+0.00393 x 70) = 43.968 uohm/m; x(1 + ys 0.0411 + yp 0.0134) = 46.367 uohm/m
+4 Insulation: T1 = 3.5/(2 pi) x ln(1 + 2 x 24 / 26.31) = 0.5784 K m/W
+5 Coverings: outer diameter 192.1 mm; T3 = 6.0/(2 pi) x ln(Dext / Dpre) = 0.1740 K m/W
+6 Soil: u = 2 x 1.0 / 0.1921 = 10.411; T4 = 1.0/(2 pi) x ln(u + sqrt(u^2 - 1)) = 0.4828 K m/W
+7 Dielectric loss per core: Wd = w C U0^2 tan d, C = 133.94 nF/km, = 0.6789 W/m
+8 Numerator: 75.0 - 0.5 x 0.6789 x 0.5784 - 3 x 0.6789 x 0.6568 = 73.4660
+9 Denominator: R T1 + 3 R (1 + 0.1) (T3 + T4) = 1.2732e-04
+10 I = sqrt(73.4660 / 1.2732e-04) = 759.6 A   (cable.py: 759.6 A)

@@ -1,0 +1,34 @@
+Revision D cables: {'array': (1000, 863.3), 'export': (630, 745.9)}
+
+INTACT
+C1 {'gen_mw': 400.0, 'loss_mw': 8.998, 'pcc_pu': 0.9902, 'export_a': 606.6, 'array_first_a': 712.2, 'max_line_loading': 82.5, 'max_trafo_loading': 83.5, 'vmax': 1.0, 'vmin': 0.9627} exceptions []
+C2 {'gen_mw': 400.0, 'loss_mw': 9.963, 'pcc_pu': 0.9537, 'export_a': 706.7, 'array_first_a': 725.9, 'max_line_loading': 94.7, 'max_trafo_loading': 83.0, 'vmax': 1.0377, 'vmin': 0.95} exceptions []
+C3 {'gen_mw': 400.0, 'loss_mw': 10.347, 'pcc_pu': 1.0246, 'export_a': 593.7, 'array_first_a': 794.1, 'max_line_loading': 92.0, 'max_trafo_loading': 95.4, 'vmax': 1.05, 'vmin': 0.9175} exceptions []
+C4 {'gen_mw': 40.0, 'loss_mw': 0.722, 'pcc_pu': 1.0481, 'export_a': 398.1, 'array_first_a': 79.6, 'max_line_loading': 53.4, 'max_trafo_loading': 9.1, 'vmax': 1.0641, 'vmin': 1.0421} exceptions []
+
+N-1
+O1 one export circuit (EXP1) out
+   C1 CURTAILED -> 246.1 MW | exceptions: [('loading', 'EXP2', 152.16)] | export A 1135.0 | max trafo % 97.4 | PCC 0.9751
+   C2 OUTSIDE LIMITS even at zero output | exceptions: [('voltage', 'PCC', 0.9397), ('loading', 'EXP2', 165.65)] | export A 1235.6 | max trafo % 86.7 | PCC 0.9397
+   C3 CURTAILED -> 256.2 MW | exceptions: [('voltage', 'ON220', 0.8852), ('voltage', 'OSS220', 0.8783), ('voltage', 'OSS66', 0.8299), ('voltage', 'S1T1', 0.8298)] | export A 1316.2 | max trafo % 120.4 | PCC 1.0066
+   C4 RIDES THROUGH | exceptions: [] | export A 421.2 | max trafo % 31.5 | PCC 1.0352
+O2 one OSS transformer (T_OSS1) out
+   C1 CURTAILED -> 248.4 MW | exceptions: [('loading', 'T_OSS2', 170.77)] | export A 580.8 | max trafo % 170.8 | PCC 0.9837
+   C2 OUTSIDE LIMITS even at zero output | exceptions: [('voltage', 'PCC', 0.9488), ('loading', 'T_OSS2', 165.43)] | export A 670.9 | max trafo % 165.4 | PCC 0.9488
+   C3 CURTAILED -> 235.2 MW | exceptions: [('voltage', 'ON220', 0.8845), ('voltage', 'OSS220', 0.8756), ('voltage', 'OSS66', 0.7295), ('voltage', 'S1T1', 0.7293)] | export A 750.8 | max trafo % 228.9 | PCC 1.0064
+   C4 RIDES THROUGH | exceptions: [] | export A 397.8 | max trafo % 18.2 | PCC 1.0481
+O3 one onshore transformer (T_ON1) out
+   C1 CURTAILED -> 239.8 MW | exceptions: [('loading', 'T_ON2', 178.08)] | export A 619.9 | max trafo % 178.1 | PCC 0.9831
+   C2 OUTSIDE LIMITS even at zero output | exceptions: [('voltage', 'PCC', 0.9484), ('loading', 'T_ON2', 165.84)] | export A 707.8 | max trafo % 165.8 | PCC 0.9484
+   C3 CURTAILED -> 216.4 MW | exceptions: [('no solution', 'load flow did not converge', None)] | export A None | max trafo % None | PCC None
+   C4 RIDES THROUGH | exceptions: [] | export A 395.9 | max trafo % 17.5 | PCC 1.0481
+O4 the first section of string 1 (A1_1) out: string 1's eight turbines disconnected
+   C1 RIDES THROUGH | exceptions: [] | export A 527.6 | max trafo % 66.2 | PCC 0.9933
+   C2 RIDES THROUGH | exceptions: [] | export A 620.3 | max trafo % 67.0 | PCC 0.9539
+   C3 RIDES THROUGH | exceptions: [] | export A 454.4 | max trafo % 73.8 | PCC 1.0319
+   C4 RIDES THROUGH | exceptions: [] | export A 389.6 | max trafo % 8.1 | PCC 1.0476
+O5 one of the two 155 MVAr reactor units out
+   C1 RIDES THROUGH | exceptions: [] | export A 598.0 | max trafo % 78.6 | PCC 1.0077
+   C2 RIDES THROUGH | exceptions: [] | export A 701.3 | max trafo % 87.7 | PCC 0.9702
+   C3 RIDES THROUGH | exceptions: [] | export A 545.0 | max trafo % 83.1 | PCC 1.0437
+   C4 VOLTAGE EXCEPTION (not curable by curtailment) | exceptions: [('voltage', 'PCC', 1.0651), ('voltage', 'ON220', 1.1068), ('voltage', 'OSS220', 1.1211), ('voltage', 'OSS66', 1.1289)] | export A 422.2 | max trafo % 30.5 | PCC 1.0651
