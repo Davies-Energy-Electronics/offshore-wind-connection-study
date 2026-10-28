@@ -1,0 +1,30 @@
+SENSITIVITY (one input moved at a time; base = 10000 MVA, 170 nF/km)
+-- base
+   C1: PCC 1.0323, internal max 1.1451 min 1.1214, cables 76.6, trafo 108.0 percent, exceptions 6
+   C2: PCC 0.9935, internal max 1.1819 min 1.1143, cables 79.3, trafo 126.1 percent, exceptions 6
+   C3: PCC 1.0700, internal max 1.1319 min 1.0998, cables 82.8, trafo 91.5 percent, exceptions 4
+   C4: PCC 1.0690, internal max 1.1429 min 1.1217, cables 48.4, trafo 42.8 percent, exceptions 5
+-- SCL 5000 MVA
+   C1: PCC 1.0675, internal max 1.1866 min 1.1619, cables 73.9, trafo 112.7 percent, exceptions 7
+   C2: PCC 1.0399, internal max 1.2331 min 1.1660, cables 76.1, trafo 132.9 percent, exceptions 6
+   C3: PCC 1.0923, internal max 1.1593 min 1.1285, cables 80.7, trafo 93.8 percent, exceptions 5
+   C4: PCC 1.0887, internal max 1.1639 min 1.1423, cables 49.3, trafo 44.4 percent, exceptions 5
+   verdict flips against base: none
+-- SCL 20000 MVA
+   C1: PCC 1.0158, internal max 1.1255 min 1.1024, cables 77.9, trafo 105.9 percent, exceptions 6
+   C2: PCC 0.9714, internal max 1.1574 min 1.0896, cables 80.9, trafo 123.0 percent, exceptions 5
+   C3: PCC 1.0598, internal max 1.1192 min 1.0864, cables 83.9, trafo 90.4 percent, exceptions 3
+   C4: PCC 1.0594, internal max 1.1327 min 1.1116, cables 48.0, trafo 42.1 percent, exceptions 5
+   verdict flips against base: none
+-- export C -20 percent (136 nF/km)
+   C1: PCC 1.0238, internal max 1.1092 min 1.0893, cables 79.0, trafo 95.4 percent, exceptions 3
+   C2: PCC 0.9854, internal max 1.1491 min 1.0839, cables 81.5, trafo 111.4 percent, exceptions 5
+   C3: PCC 1.0609, internal max 1.0939 min 1.0597, cables 86.0, trafo 85.8 percent, exceptions 1
+   C4: PCC 1.0663, internal max 1.1297 min 1.1114, cables 38.8, trafo 36.5 percent, exceptions 5
+   verdict flips against base: none
+-- export C +20 percent (204 nF/km)
+   C1: PCC 1.0413, internal max 1.1828 min 1.1553, cables 74.1, trafo 124.4 percent, exceptions 6
+   C2: PCC 1.0020, internal max 1.2165 min 1.1464, cables 82.3, trafo 143.8 percent, exceptions 6
+   C3: PCC 1.0796, internal max 1.1719 min 1.1416, cables 79.7, trafo 105.0 percent, exceptions 7
+   C4: PCC 1.0730, internal max 1.1612 min 1.1369, cables 58.4, trafo 52.3 percent, exceptions 5
+   verdict flips against base: none

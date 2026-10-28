@@ -1,0 +1,215 @@
+{
+ "meta": {
+  "pandapower_version": "3.5.6",
+  "numpy_version": "2.4.6",
+  "criteria_revision": "A",
+  "cases": {
+   "case9": {
+    "buses": 9,
+    "branches": 9,
+    "independent_iterations": 4,
+    "loss_mw_pandapower": 4.641021474482866,
+    "loss_mw_independent": 4.641021474482887
+   },
+   "case14": {
+    "buses": 14,
+    "branches": 20,
+    "independent_iterations": 4,
+    "loss_mw_pandapower": 13.3932723578985,
+    "loss_mw_independent": 13.393272357898605
+   }
+  }
+ },
+ "checks": [
+  {
+   "check": "X-VM",
+   "case": "case9",
+   "quantity": "bus voltage magnitude",
+   "max_abs_deviation": 4.440892098500626e-16,
+   "unit": "pu",
+   "tolerance": 1e-06,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "X-VA",
+   "case": "case9",
+   "quantity": "bus voltage angle",
+   "max_abs_deviation": 8.881784197001252e-15,
+   "unit": "degree",
+   "tolerance": 0.0001,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "X-FLOW",
+   "case": "case9",
+   "quantity": "branch active and reactive flow, both ends",
+   "max_abs_deviation": 6.235012506294879e-13,
+   "unit": "MW or MVAr",
+   "tolerance": 0.0001,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "X-LOSS",
+   "case": "case9",
+   "quantity": "total active loss",
+   "max_abs_deviation": 2.1316282072803006e-14,
+   "unit": "MW",
+   "tolerance": 0.0001,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "D-BUNDLED",
+   "case": "case9",
+   "quantity": "bus voltage magnitude and angle after solving",
+   "max_abs_deviation": 0.3887356449853261,
+   "unit": "degree",
+   "tolerance": null,
+   "verdict": "FAIL",
+   "detail": "max |dVm| 4.000e-02 pu, max |dVa| 3.887e-01 degree"
+  },
+  {
+   "check": "C9-CHOW-QG",
+   "case": "case9",
+   "quantity": "generator reactive output",
+   "max_abs_deviation": 0.1136603184273417,
+   "unit": "MVAr",
+   "tolerance": 0.15,
+   "verdict": "INFORMATIONAL",
+   "detail": ""
+  },
+  {
+   "check": "C9-CHOW-PG1",
+   "case": "case9",
+   "quantity": "slack active output",
+   "max_abs_deviation": 0.6589785255176253,
+   "unit": "MW",
+   "tolerance": 0.1,
+   "verdict": "INFORMATIONAL",
+   "detail": "case file 72.3 MW, pandapower 71.641 MW"
+  },
+  {
+   "check": "C9-PUB-VM",
+   "case": "case9",
+   "quantity": "bus voltage magnitude",
+   "max_abs_deviation": 0.00036914195170545394,
+   "unit": "pu",
+   "tolerance": 0.001,
+   "verdict": "PASS",
+   "detail": "inputs/LV12/case9_published.csv"
+  },
+  {
+   "check": "C9-PUB-VA",
+   "case": "case9",
+   "quantity": "bus voltage angle",
+   "max_abs_deviation": 0.03524866686324302,
+   "unit": "degree",
+   "tolerance": 0.05,
+   "verdict": "PASS",
+   "detail": "inputs/LV12/case9_published.csv"
+  },
+  {
+   "check": "X-VM",
+   "case": "case14",
+   "quantity": "bus voltage magnitude",
+   "max_abs_deviation": 4.440892098500626e-16,
+   "unit": "pu",
+   "tolerance": 1e-06,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "X-VA",
+   "case": "case14",
+   "quantity": "bus voltage angle",
+   "max_abs_deviation": 2.6645352591003757e-14,
+   "unit": "degree",
+   "tolerance": 0.0001,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "X-FLOW",
+   "case": "case14",
+   "quantity": "branch active and reactive flow, both ends",
+   "max_abs_deviation": 8.419931418757187e-13,
+   "unit": "MW or MVAr",
+   "tolerance": 0.0001,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "X-LOSS",
+   "case": "case14",
+   "quantity": "total active loss",
+   "max_abs_deviation": 1.0480505352461478e-13,
+   "unit": "MW",
+   "tolerance": 0.0001,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "D-BUNDLED",
+   "case": "case14",
+   "quantity": "bus voltage magnitude and angle after solving",
+   "max_abs_deviation": 2.1316282072803006e-14,
+   "unit": "degree",
+   "tolerance": null,
+   "verdict": "PASS",
+   "detail": "max |dVm| 4.441e-16 pu, max |dVa| 2.132e-14 degree"
+  },
+  {
+   "check": "C14-PUB-VM",
+   "case": "case14",
+   "quantity": "bus voltage magnitude",
+   "max_abs_deviation": 0.0013291463082354404,
+   "unit": "pu",
+   "tolerance": 0.001,
+   "verdict": "FAIL",
+   "detail": ""
+  },
+  {
+   "check": "C14-PUB-VA",
+   "case": "case14",
+   "quantity": "bus voltage angle",
+   "max_abs_deviation": 0.017098907668406937,
+   "unit": "degree",
+   "tolerance": 0.05,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "C14-PUB-QG",
+   "case": "case14",
+   "quantity": "generator reactive output",
+   "max_abs_deviation": 1.6753484991220233,
+   "unit": "MVAr",
+   "tolerance": 0.1,
+   "verdict": "FAIL",
+   "detail": ""
+  },
+  {
+   "check": "C14-PUB-PG",
+   "case": "case14",
+   "quantity": "slack generator active output",
+   "max_abs_deviation": 0.006727642101651554,
+   "unit": "MW",
+   "tolerance": 0.1,
+   "verdict": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "C14-PUB-LOSS",
+   "case": "case14",
+   "quantity": "total active loss, sum of Pg minus sum of Pd",
+   "max_abs_deviation": 0.006727642101477471,
+   "unit": "MW",
+   "tolerance": 0.1,
+   "verdict": "PASS",
+   "detail": "published loss 13.400 MW"
+  }
+ ]
+}

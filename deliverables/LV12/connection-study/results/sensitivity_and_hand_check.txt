@@ -1,0 +1,6 @@
+case14 placeholder 33 kV      max|dVm| 0.00e+00 pu  max|dVa| 0.00e+00 deg
+case14 placeholder 345 kV     max|dVm| 6.66e-16 pu  max|dVa| 2.13e-14 deg
+case14 init=dc                max|dVm| 4.44e-16 pu  max|dVa| 2.31e-14 deg
+case14 tolerance_mva=1e-6     max|dVm| 5.74e-09 pu  max|dVa| 5.08e-07 deg
+hand check, 9-bus branch 8-2: V8 1.025769 pu, V2 1.025000 pu, theta2-theta8 5.5603 deg
+  P = V8*V2*sin(theta2-theta8)/x*100 = 163.0000 MW; pandapower flow leaving bus 2 into the branch 163.0000 MW; generator 2 output in the case file 163 MW

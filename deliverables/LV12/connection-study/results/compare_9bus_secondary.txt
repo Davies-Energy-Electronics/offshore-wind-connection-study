@@ -1,0 +1,12 @@
+wscc_bus matpower_bus  ref_vm  ours_vm  d_vm       ref_va   ours_va   d_va_deg
+       1            1    1.04   1.0400     0.0000    0.00    0.0000    0.0000
+       2            2    1.03   1.0250     0.0050    9.28    9.2800    0.0000
+       3            3    1.03   1.0250     0.0050    4.66    4.6648    0.0048
+       4            4    1.03   1.0258     0.0042   -2.22   -2.2168    0.0032
+       5            9    1.00   0.9956     0.0044   -3.99   -3.9888    0.0012
+       6            5    1.01   1.0127     0.0027   -3.69   -3.6874    0.0026
+       7            8    1.03   1.0258     0.0042    3.72    3.7197    0.0003
+       8            7    1.02   1.0159     0.0041    0.73    0.7275    0.0025
+       9            6    1.03   1.0324     0.0024    1.97    1.9667    0.0033
+worst angle difference 0.0048 degree (criteria tolerance 0.05); every magnitude within the 0.005 pu a 2 dp print covers: yes (worst 0.0050 pu)
+Verdict: INFORMATIONAL PASS against a secondary source. C9-PUB stays OPEN until the Anderson and Fouad table is supplied or Jack accepts this source.

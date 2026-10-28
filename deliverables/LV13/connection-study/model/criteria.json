@@ -1,0 +1,32 @@
+{
+  "revision": "A",
+  "written": "2026-10-18",
+  "note": "Written and committed BEFORE any LV13 load-flow number was run. Do not edit after the first run without issuing a new revision and saying why.",
+  "question": "Do the four operating cases of the 400 MW connection model solve with voltages and loadings inside limits, or are the exceptions explained?",
+  "voltage_limits_pu": {
+    "pcc_400kv": [0.95, 1.05],
+    "internal_220kv_and_66kv": [0.90, 1.10],
+    "basis": "Author's design criteria. NOT SOURCED to a standard: no grid code or standard was read for this block. To be checked against the Grid Code and equipment specifications before any claim of compliance."
+  },
+  "loading_limit_percent": {"cables": 100.0, "transformers": 100.0,
+    "basis": "Loading is current over the provisional continuous rating (cables) or apparent power over the nameplate MVA (transformers). Cable ratings are PROVISIONAL and ASSUMED; they are replaced by the cable-sizing block (LV14)."},
+  "pass_rule": "A case is INSIDE LIMITS only if it converges and every bus voltage and every branch loading is inside the limits above. A bus or branch outside a limit is an EXCEPTION. Every exception is explained by a computed cause (a number from code). A remedy may be shown only as a separate, labelled what-if run; the base case and its limits are never changed after the run.",
+  "convergence": "pandapower runpp, algorithm nr, init flat, tolerance_mva 1e-9, max_iteration 50, calculate_voltage_angles True, enforce_q_lims False.",
+  "checks": [
+    {"id": "SOLVE", "what": "all four cases converge", "tolerance": "converged flag true"},
+    {"id": "X-VM", "what": "bus voltage magnitude, pandapower vs independent solver", "tolerance": 1e-6, "unit": "pu"},
+    {"id": "X-VA", "what": "bus voltage angle, pandapower vs independent solver", "tolerance": 1e-4, "unit": "degree"},
+    {"id": "X-FLOW", "what": "branch active and reactive flow at both ends, pandapower vs independent solver", "tolerance": 1e-4, "unit": "MW or MVAr"},
+    {"id": "X-LOAD", "what": "branch loading percent, pandapower vs loading recomputed from the independent flows", "tolerance": 1e-3, "unit": "percent"},
+    {"id": "BAL", "what": "sum of generation minus power into the grid equals total branch loss", "tolerance": 1e-6, "unit": "MW"},
+    {"id": "SENS", "what": "sensitivity on the two least certain inputs (grid short-circuit level 5 and 20 GVA against 10 GVA; export cable capacitance -20 and +20 percent). Reported as the change in the worst voltage and worst loading; an inside-limits verdict that flips is reported as sensitive.", "tolerance": "informational"},
+    {"id": "HAND", "what": "export cable charging per circuit V^2*omega*C and full-load string current recomputed by hand-style formula, against model outputs", "tolerance": 0.5, "unit": "percent of value"}
+  ],
+  "cases": [
+    {"id": "C1", "name": "Rated output, unity power factor, nominal grid", "p_mw": 400, "pf": "unity", "grid_v_pu": 1.00, "reactor": false},
+    {"id": "C2", "name": "Rated output, exporting reactive power, low grid voltage", "p_mw": 400, "pf": "0.95 exporting Q", "grid_v_pu": 0.95, "reactor": false},
+    {"id": "C3", "name": "Rated output, absorbing reactive power, high grid voltage", "p_mw": 400, "pf": "0.95 absorbing Q", "grid_v_pu": 1.05, "reactor": false},
+    {"id": "C4", "name": "Light wind (10 percent), unity power factor, high grid voltage, export cable charging, shunt reactor in service", "p_mw": 40, "pf": "unity", "grid_v_pu": 1.05, "reactor": true}
+  ],
+  "scope_limits": ["Intact network only: N-1 belongs to LV15.", "No tap changing: all transformer taps fixed at nominal.", "Fault levels and grading belong to LV14 and LV15."]
+}

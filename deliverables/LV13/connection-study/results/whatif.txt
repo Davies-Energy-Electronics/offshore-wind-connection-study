@@ -1,0 +1,10 @@
+WHAT-IF W1 (NOT part of the pass rule; chosen after the base results were seen): onshore 220 kV shunt reactor of 310 MVAr (about 100 percent of nominal total export cable charging) in service in ALL four cases
+   C1: PCC 0.9942, internal max 0.9963 min 0.9777, cables 88.0, trafo 80.8 percent, exceptions 0
+   C2: PCC 0.9574, internal max 1.0473 min 0.9783, cables 89.2, trafo 84.7 percent, exceptions 0
+   C3: PCC 1.0290, internal max 0.9720 min 0.9300, cables 98.2, trafo 93.1 percent, exceptions 0
+   C4: PCC 1.0521, internal max 1.0775 min 1.0574, cables 45.7, trafo 8.8 percent, exceptions 1
+   C1: Q into grid -89.6 MVAr, P into grid 394.13 MW
+   C2: Q into grid 40.1 MVAr, P into grid 393.41 MW
+   C3: Q into grid -248.9 MVAr, P into grid 393.38 MW
+   C4: voltage PCC: 1 bus(es), 1.0521 to 1.0521 pu, limits [0.95, 1.05]
+   C4: Q into grid 18.7 MVAr, P into grid 39.49 MW

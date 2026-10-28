@@ -1,0 +1,54 @@
+{
+  "revision": "A",
+  "note": "Open findings recorded under criteria revision A, which Jack has decided to keep. They are pinned by tests/test_validation.py: the test fails if a recorded deviation changes, whether it grows or shrinks.",
+  "findings": [
+    {
+      "id": "F-001",
+      "status": "OPEN",
+      "check": "C14-PUB-VM",
+      "case": "case14",
+      "statement": "pandapower, and an independent solver, give bus voltage magnitudes that differ from the printed IEEE 14-bus solution by up to 1.329e-3 pu, against a tolerance of 1.0e-3 pu. Only bus 4 exceeds the tolerance.",
+      "worst_bus": 4,
+      "published_pu": 1.019,
+      "computed_pu": 1.017671,
+      "pinned_deviation_pu": 0.001329,
+      "pin_tolerance_pu": 5e-07,
+      "cause": "NOT SOURCED",
+      "ruled_out_by_test": "shunt at bus 9, tap direction and line charging (validation/diagnose_14bus.py): none improves the match"
+    },
+    {
+      "id": "F-002",
+      "status": "OPEN",
+      "check": "C14-PUB-QG",
+      "case": "case14",
+      "statement": "Generator reactive output differs from the printed solution by 0.22 to 1.68 MVAr at all five generators, against a tolerance of 0.1 MVAr.",
+      "published_mvar": {
+        "1": -16.9,
+        "2": 42.4,
+        "3": 23.4,
+        "6": 12.2,
+        "8": 17.4
+      },
+      "computed_mvar": {
+        "1": -16.549301,
+        "2": 43.5571,
+        "3": 25.075348,
+        "6": 12.730944,
+        "8": 17.623451
+      },
+      "pinned_worst_deviation_mvar": 1.675348,
+      "pin_tolerance_mvar": 5e-06,
+      "cause": "NOT SOURCED",
+      "ruled_out_by_test": "as F-001"
+    },
+    {
+      "id": "F-003",
+      "status": "CLOSED",
+      "check": "C9-PUB",
+      "case": "case9",
+      "statement": "The comparison with a published 9-bus solution table is OPEN until Jack supplies inputs/LV12/case9_published.csv (columns bus,vm_pu,va_degree).",
+      "cause": "table not supplied",
+      "closed": "2026-10-28: Anderson and Fouad, Power System Control and Stability, 2nd ed., Fig. 2.19 (p. 38), typed into inputs/LV12/case9_published.csv in the book's bus numbering and mapped to MATPOWER's by load. C9-PUB-VM PASS 3.69e-4 pu (tolerance 0.001), C9-PUB-VA PASS 0.035 degree (tolerance 0.05; the book prints angles to 0.1 degree, so the rule's own tolerance would be 0.1)."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "revision": "A",
+  "written": "2026-10-18",
+  "note": "Written and committed BEFORE any validation number was run. Do not edit after the first run without issuing a new revision and saying why.",
+  "rule": "A published comparison tolerance is 2 x the half-unit of the last printed digit of the published value, rounded up to a clean figure, then widened only where the source gives a reason. A solver-to-solver tolerance is set by the stated convergence tolerance of both solvers.",
+  "solver_settings": {
+    "pandapower": "pp.runpp(net, algorithm='nr', init='flat', tolerance_mva=1e-9, max_iteration=50, enforce_q_lims=False, calculate_voltage_angles=True)",
+    "independent": "polar Newton-Raphson in numpy, mismatch tolerance 1e-10 per unit on a 100 MVA base, generator reactive limits not enforced"
+  },
+  "checks": [
+    {"id": "C14-PUB-VM", "case": "case14", "against": "published", "quantity": "bus voltage magnitude", "unit": "pu", "tolerance": 0.001, "basis": "published to 3 decimals, half-unit 0.0005, doubled"},
+    {"id": "C14-PUB-VA", "case": "case14", "against": "published", "quantity": "bus voltage angle", "unit": "degree", "tolerance": 0.05, "basis": "published to 2 decimals, half-unit 0.005, widened to 0.05 because the 1962 data were solved with a 1990s-era program whose convergence tolerance is not stated: NOT SOURCED"},
+    {"id": "C14-PUB-QG", "case": "case14", "against": "published", "quantity": "generator reactive output", "unit": "MVAr", "tolerance": 0.1, "basis": "published to 1 decimal, half-unit 0.05, doubled"},
+    {"id": "C14-PUB-PG", "case": "case14", "against": "published", "quantity": "slack generator active output", "unit": "MW", "tolerance": 0.1, "basis": "published to 1 decimal, half-unit 0.05, doubled"},
+    {"id": "C14-PUB-LOSS", "case": "case14", "against": "published", "quantity": "total active loss, sum of Pg minus sum of Pd", "unit": "MW", "tolerance": 0.1, "basis": "difference of two published 1 decimal sums"},
+    {"id": "C9-PUB", "case": "case9", "against": "published solution table", "status": "OPEN", "reason": "No primary published solution table for the 9-bus case (Anderson and Fouad) could be read in the build session: the University of Washington archive and the textbook were unreachable. A secondary search result was not treated as a source. The harness reads inputs/LV12/case9_published.csv if Jack supplies it; tolerances then Vm 0.001 pu, Va 0.05 degree, set by the same rule as C14."},
+    {"id": "C9-CHOW-QG", "case": "case9", "against": "case file generator table (Chow 1982 via MATPOWER)", "quantity": "generator reactive output", "unit": "MVAr", "tolerance": 0.15, "status": "INFORMATIONAL", "basis": "Printed to 2 decimals. Informational, not a pass criterion, because the case file does not say which columns are solved outputs and Chow has not been read: NOT VERIFIED."},
+    {"id": "C9-CHOW-PG1", "case": "case9", "against": "case file generator table (Chow 1982 via MATPOWER)", "quantity": "slack active output", "unit": "MW", "tolerance": 0.1, "status": "INFORMATIONAL", "basis": "Informational for the same reason as C9-CHOW-QG."},
+    {"id": "X-VM", "case": "case9 and case14", "against": "independent solver", "quantity": "bus voltage magnitude", "unit": "pu", "tolerance": 1e-6, "basis": "both solvers converged to 1e-9 or better"},
+    {"id": "X-VA", "case": "case9 and case14", "against": "independent solver", "quantity": "bus voltage angle", "unit": "degree", "tolerance": 1e-4, "basis": "1e-6 rad is 5.7e-5 degree"},
+    {"id": "X-FLOW", "case": "case9 and case14", "against": "independent solver", "quantity": "branch active and reactive flow, both ends", "unit": "MW and MVAr", "tolerance": 1e-4, "basis": "1e-6 pu on 100 MVA"},
+    {"id": "X-LOSS", "case": "case9 and case14", "against": "independent solver", "quantity": "total active loss", "unit": "MW", "tolerance": 1e-4, "basis": "as X-FLOW"},
+    {"id": "D-BUNDLED", "case": "case9 and case14", "against": "pandapower bundled case", "quantity": "bus voltage magnitude and angle after solving", "unit": "pu and degree", "tolerance_vm": 1e-6, "tolerance_va": 1e-4, "basis": "tests that the data pandapower ships equals the data read from the MATPOWER files, so the validation applies to what users run"}
+  ],
+  "verdict_rule": "Every check without a status must pass for the case to be called reproduced. OPEN and INFORMATIONAL checks are reported as such and never counted as a pass."
+}

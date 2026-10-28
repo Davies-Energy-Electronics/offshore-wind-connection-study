@@ -1,0 +1,4 @@
+data as published          max|dVm| 0.0013 pu  max|dVa| 0.017 deg  max|dQg| 1.675 MVAr  loss 13.393 MW
+bus 9 shunt removed        max|dVm| 0.0223 pu  max|dVa| 0.198 deg  max|dQg| 9.404 MVAr  loss 13.551 MW
+tap ratios inverted        max|dVm| 0.0282 pu  max|dVa| 0.918 deg  max|dQg| 55.525 MVAr  loss 13.624 MW
+line charging removed      max|dVm| 0.0034 pu  max|dVa| 0.037 deg  max|dQg| 12.825 MVAr  loss 13.428 MW
